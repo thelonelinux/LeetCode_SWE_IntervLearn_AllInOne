@@ -377,6 +377,8 @@
     * see in notes pdf. for gantt chat and numerical understanding of each scheduling algorithm
 * --
 * 3. PROCESS SYNCHRONIZATION (CONCURRENCY AND SYNCHRONIZATION)
+  * Concurrent means running currently both the process. Parallelly you can understand.
+  * Followed this YT playlist for synchronization - https://www.youtube.com/watch?v=ju4bycQQF2A&list=PL8tc66sMn9Kggk4zRPzcjXNUIDDnJKUnU
   * As we know degree of multiprogramming depends on the RAM. Number of frames/process in RAM. So all this process are running simultaneously.
   * So because of multiprogramming nature of our modern operating system, the concept of synchronization came into the view.
   * On the basis of synchronization - Processes can be divided into two types
@@ -433,13 +435,102 @@
             * Designed by Dijkstra
             * What gave rise to Semaphore - The critical section problem, multi-process env, process are constantly access shared resources, which gave rise to Race condition
             * So, process must access the Shared resources in a mutual exclusive manner.
-            * So 05 must resolve this, os is software only, Software is progrms only, so we need good program/algo to resolve this issue and allow mutual exclusion.
+            * So OS must resolve this, os is software only, Software is programs only, so we need good program/algo to resolve this issue and allow mutual exclusion in multiprogramming system.
             * Semaphores helps in attaining mutual exclusion
-            * Semaphore is just a variable, (Integer Variable),
+            * Semaphore is just a variable, (Integer Variable), Or say similar to variable.
             * Uses of semaphore - (See in yt also)
-              * 1, MUTEX - Provides Mutual Exclusion
+              * 1. MUTEX - Provides Mutual Exclusion (Most important use of semaphore)
               * 2. NOTIFIER - Notifies events to processes
               * 3. COUNTER - Tracks processes or resources
+            * Semaphore as a flag variable (Lock).
+            * Semaphore can be also used as counters - They keep track of processes and resources.
+            * SEMAPHORE AS AN COUNTER
+              * int s = 1 ; (C programming language)
+              * It is a basic integer. Once initialized you can perform only two operation on it.
+              * Semaphore Methods
+                * wait() - Decrement Operation (Present in the entry section of the program/process)
+                  * --code--.
+                  * void wait(sem S){
+                    * S.count--;
+                    * if(S.count < 0){
+                      * add the caller to the waiting list
+                      * block();
+                    * }
+                  * }
+                * ---.
+                * After the decreasing the counter by 1, If the counter value becomes negative, then
+                  * 1. Add the caller to the waiting list and then 
+                  * 2. Block itself
+                
+                * Signal() - Increment Operation (Present in the exit section of the program/process)
+                  * --code--.
+                  * void signal (sem S){
+                    * S.count++
+                    * if(s.count <= 0){
+                      * rewmove a process P from the waiting list;
+                      * resume(P);
+                    * }
+                  * }
+                  * ---.
+                  * After increasing the counter by 1, if the value is not positive, then 
+                    * 1. Remove a process P from the waiting list
+                    * 2. Resume the execution of process P and return
+            * TYPES OF SEMAPHORES
+              * 1. COUNTING SEMAPHORES
+                * Value can be any sort of number. Any integer value.
+                * Used to co-ordinate resources, where the value of semaphores is equal to the number of resources.
+                * If S = 9, means we can perform 9 successful s.wait(). Means only 9 processes are allowed to access the resource.
+                  * If the S>9, then the process will get blocked in the waiting queue.
+                  * So this initialized value of S=9 tells us that only 9 process will access the resource. and hence 9 successful wait operation will be performed.
+                  * EXAMPLE 
+                    * Let say we have S = 4. So we have 4 Resource available
+                    * Now comes process P1, it will get the resource, and then wait(S) operation is performed.
+                    * This wait operation will decrement the value of S to 3.
+                    * Now P2 comes, decrement value of S to 2, P3 comes S becomes 1, 
+                    * Now P4 comes, S becomes 0
+                    * Now P5 comes, and S becomes -1. Now the values is -1, this says that all our resource unit is utilized now.
+                    * So process P5 goes in waiting queue, and have to wait until any of P1-P4 are done there task and resource is available.
+                    * Once P1 is done it's task in Critical Section. It will run Signal(S) method and increment the S to 0.
+                    * So now P5 can get the resource which is internally checking S by using do while loop for checking S.
+                    * So this is the working of counting semaphore.
+                * If S = -9, means there are already 9 suspended processes
+              * 2. BINARY SEMAPHORES
+                * Only two values 0 and 1.
+                * Use as a lock for single resource.
+                * S.Wait() only works when S=1
+                * Easier to implement
+                * EXAMPLE
+                  * Let say we have S = 1. Here S is lock. lock=S=1
+                  * Now comes process P1, wait(S) operation executed, S decreases to 0. Resource is allocated to P1.
+                  * Now comes process P2, wait(S) operation executed, S decreases to -1. That means go in waiting queue.
+                  * Once P1 completes its critical section, it will free the lock by performing Signal(lock) or signal(S) by incrementing the S/lock and P2 can use the resource.
+                  * P2 internally checks the value of lock or S by doing do while loop for if lock>=0 like this.
+                  * So value of binary semaphores only work with two process.
+                * See in YT for diagram wise understanding.
+                * https://www.youtube.com/watch?v=5BIXGnhwhxA&list=PL8tc66sMn9Kggk4zRPzcjXNUIDDnJKUnU&index=5&ab_channel=AnjaliSharma
+            * PROBLEMS WITH SEMAPHORE (DEADLOCK AND STARVATION)
+              * Wait() is in the entry section of the program/process
+              * signal() is in the exit section of the program/process
+              * Incorrect use of wait and signal operation can give rise to deadlock and starvation.
+                * s.signal() .... S.wait()
+                * s.wait() ..... s.wait()
+                * omitting s.wait() or s.signal() or both
+                * So these all incorrect use can lead to deadlock and starvation
+              * So first should be wait and then signal, else the process will be violating mutual exclusion which in return there will be two process in critical section for single resource.
+          * READER WRITER PROBLEM - SOLUTION FOR THE CRITICAL SECTION PROBLEM (USING THE HELP OF SEMAPHORE)
+            * Problem Statement
+              * The problem is to ensure that the writer have exclusive excess to the shared objects.
+              * Then means only one writer can have access to the file at a time. 
+              * And when writer is kept updating the file, reader process is kept waiting.
+            * Variations
+              * No reader will be kept waiting unless a writer has already abtain permission to use the shared objects.
+                * It means no reader should wait for readers to finish simply because writer is waiting.
+              * Once the writer is ready the writer performs it write as soon as possible. 
+                * It means if a writer is waiting to access the object, no new reader will start reading.
+            * Solution - Using Binary Semaphore
+              * See YT to understand the working
+              * https://www.youtube.com/watch?v=uT8oUS5T7cQ&list=PL8tc66sMn9Kggk4zRPzcjXNUIDDnJKUnU&index=6&ab_channel=AnjaliSharma
+              * use of semaphore mutex=1, wrt=1 (for reading and writing so two binary variables)
 
 * --- < END > ------
 
