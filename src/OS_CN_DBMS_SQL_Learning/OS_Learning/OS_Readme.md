@@ -134,6 +134,7 @@
     * IMPORTANT - See youtube to understand process state transition better.
   * PROCESS CONTROL BLOCK
     * Each process is represented in the operating system by a Process Control Block (PCB) - also called as task control block
+    * Process Control Block is some memory block which stores the information about a process. Each process has a PCB to restore its details.
     * Some of the items that PCB stores are 
       * Process State - It says in which state the process is in at that particular moment.
       * Process Number - Process ID, It shows the unique number to identify the process.
