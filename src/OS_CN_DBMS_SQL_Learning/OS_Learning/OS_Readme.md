@@ -532,7 +532,30 @@
               * See YT to understand the working
               * https://www.youtube.com/watch?v=uT8oUS5T7cQ&list=PL8tc66sMn9Kggk4zRPzcjXNUIDDnJKUnU&index=6&ab_channel=AnjaliSharma
               * use of semaphore mutex=1, wrt=1 (for reading and writing so two binary variables)
-
+              * mutex to access readcount (shared among readers)
+              * wrt for notifying that writing is being performed.
+              * REST you learn from vide only. and more during interview only
+          * SLEEPING BARBER PROBLEM (USE OF SEMAPHORE)
+            * Problem statement
+              * Keeping the barber working, when there  are customers, keeping barber resting when there are no customers.
+              * we have one barber chair and a waiting room with numbers of chairs.
+            * Rest you see in YT - https://www.youtube.com/watch?v=puJnIpNks0Q&list=PL8tc66sMn9Kggk4zRPzcjXNUIDDnJKUnU&index=7&ab_channel=AnjaliSharma
+            * More you learn during interview only from here.
+          * MONITORS (PRODUCER CONSUMER PROBLEM - BOUNDED BUFFER - SEMAPHORE)
+            * If we miss out any of wait() and signal() operation the mutual exclusion can be violated.
+            * A monitor is a programming language construct that supports controlled access to shared data.
+            * A monitor encapsulates:
+              * Shared data structure
+              * Procedure that operates on the shared data 
+              * Perform synchronization among these processes
+            * Data can only nbe accessed from within the monitor. Protecs the data from unstructured access.
+            * Rest see in YT or learn in during interview only - https://www.youtube.com/watch?v=gW67ojO9jjY&list=PL8tc66sMn9Kggk4zRPzcjXNUIDDnJKUnU&index=8&ab_channel=AnjaliSharma
+        * BUSY WAITING IN CRITICAL SECTION
+          * check in YT only and learn during interview only - https://www.youtube.com/watch?v=W3aZQQHUWCI&list=PL8tc66sMn9Kggk4zRPzcjXNUIDDnJKUnU&index=9&ab_channel=AnjaliSharma
+          * 
+* --
+* 4. DEADLOCKS AND DEADLOCK HANDLING METHODS (SEE PART 3 TO UNDERSTAND HOW WE COME TO THIS CHAPTER - CONTINUATION)
+  * PROBLEMS WITH SEMAPHORE (DEADLOCK AND STARVATION) - from above part 3 continuation
 * --- < END > ------
 
 
