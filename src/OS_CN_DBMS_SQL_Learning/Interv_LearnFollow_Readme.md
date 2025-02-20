@@ -1,5 +1,5 @@
 # TASK TO DO WITH OS README ENHANCE
-* Re-update the index.
+* Re-update the OS index.
 * Some YT learn for basics of 05 (All in One put)
 * Basics of 05 see GFG. Organize according to that.
 * Now learn OS interviewbit once and get done with it.

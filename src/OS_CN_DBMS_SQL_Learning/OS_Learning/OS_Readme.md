@@ -25,35 +25,23 @@
 * If you learn after a long time, to re-install the concepts you have to do Youtube learning for main concepts.
 * during interview better learn important chapters. Very high level side questions you might be not able to answer then no worries.
 
+
 ## OS LEARNING
-### PHYSICAL NOTES COPY
-* For beginner notes see your physical saved notes.
-* But need to make a full fledged topic wise notes
-* .
 ### INTERVIEW QUESTIONS
-* Later we also need OS whole interview questions from Interviewbit to learn.
-* But you first understand and learn proper notes then only go throught the learning of interviewbit questions for practise.
+* OS Interviewbit questions - Pdf attached. Now you should be able to answer most of questions after below learning and understanding
 * https://www.interviewbit.com/operating-system-interview-questions/
-* .
-### YOUTUBE TO LEARN IF ANY
-* .
-
-## SCALER OPERATING SYSTEM LEARNING - FOLLOWING SCALER WAY
+* Scaler OS learning - Just in case you want more learning then. else the below learning you have done is enough
 * https://www.scaler.com/topics/operating-system/
-* Here you can find better way of learning for semaphore and check topicwise learning here as well.
 
-## TOPICS WISE LEARNING AND ARRANGEMENTS (INDEX OF OS - LEARNING TOPIC WISE) - FOLLOWING GFG TOPICWISE
+
+## MY TOPICS WISE OS LEARNING AND ARRANGEMENTS (INDEX OF OS - LEARNING TOPIC WISE) - FOLLOWING GFG TOPICWISE
 * Precise idea of topicwise learning you can check here - https://www.geeksforgeeks.org/operating-systems/
 * We are following heading topics of this geeksforgeeks sequence wise only
-### EXTRAS TOPICS- 
+### 0. EXTRAS TOPICS (Probably comes in OS Basics)
 #### Boot Process, Booting, BIOS, Bootstrap Loader (BootLoader)
-    * This topic is added in your notes in old notebook only
-* . 
+* This topic is added in your notes in old notebook only.
 
-### 1. OPERATING SYSTEM TUTORIAL
-* .
-
-### 2. OS BASICS
+### 1. OS BASICS
 #### What is Operating System?
 #### Functions of Operating Systems
 #### Types of Operating Systems
@@ -61,7 +49,7 @@
 #### Commonly Used Operating System
 * .
 
-### 3. STRUCTURE OF OPERATING SYSTEM
+### 2. STRUCTURE OF OPERATING SYSTEM
 #### Operating System Services
 #### Introduction of System Call
 #### System Programs in Operating System
@@ -70,7 +58,7 @@
 #### Booting and Dual Booting of Operating System
 * .
 
-### 4. TYPES OF OS
+### 3. TYPES OF OS
 #### Batch Processing Operating System
 #### Multiprogramming in Operating System
 #### Time Sharing Operating System
@@ -78,7 +66,7 @@
 #### Real Time Operating System (RTOS)
 * .
 
-### 5. PROCESS MANAGEMENT (RE-UPDATED INDEX BY MY LEARNING)
+### 4. PROCESS MANAGEMENT (RE-UPDATED INDEX BY MY LEARNING)
 * 1. Introduction to Process Management
   * Pre-requisites Topics
     * Process and Threads
@@ -662,14 +650,13 @@
     * ..
 * --- < END > ------
 
-
-### 6-7. THREADS IN OS
+### 5. THREADS IN OS
 #### Thread in Operating System
 #### Threads and its types in Operating System
 #### Multithreading in Operating System
 * .
 
-### 8-9-10. DEADLOCKS AND DEADLOCK HANDLING METHODS
+### 6. DEADLOCKS AND DEADLOCK HANDLING METHODS
 #### Introduction of Deadlock in Operating System
 #### Conditions for Deadlock in Operating System
 #### Banker's Algorithm in Operating System
@@ -681,8 +668,7 @@
 #### Recovery from Deadlock in Operating System
 * .
 
-
-### 11. MEMORY MANAGEMENT (GFG TOPIC INDEX - ENHANCED BY MY LEARNING)
+### 7. MEMORY MANAGEMENT (GFG TOPIC INDEX - ENHANCED BY MY LEARNING)
 * 1. Implementation of Contiguous Memory Management Techniques
   * A. Fixed (or static) Partitioning
   * B. Variable (or Dynamic) Partitioning (Below are dynamic allocation technique for contiguous memory allocation)
@@ -981,8 +967,7 @@
       * Nothing about this. not so important
 * --<END>--
 
-
-### 12. STORAGE MANAGEMENT
+### 8. STORAGE MANAGEMENT
 #### Storage Management
 #### File Systems in Operating System
 #### File Allocation Methods
@@ -1018,10 +1003,7 @@
   * LEVEL 6 - Here we add parity code of each program in two separate disks which is used by programs only (and not alone) rather than in one.
   * More you can understand by watching the videos by watching.
 * 4. I/O Management
-* .
 
-### 13. OS INTERVIEW QUESTIONS / OS QUIZ AND GATE PYQ'S
-* .
 
 
 
