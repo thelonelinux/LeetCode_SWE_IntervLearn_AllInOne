@@ -554,8 +554,112 @@
           * check in YT only and learn during interview only - https://www.youtube.com/watch?v=W3aZQQHUWCI&list=PL8tc66sMn9Kggk4zRPzcjXNUIDDnJKUnU&index=9&ab_channel=AnjaliSharma
           * 
 * --
-* 4. DEADLOCKS AND DEADLOCK HANDLING METHODS (SEE PART 3 TO UNDERSTAND HOW WE COME TO THIS CHAPTER - CONTINUATION)
-  * PROBLEMS WITH SEMAPHORE (DEADLOCK AND STARVATION) - from above part 3 continuation
+* 4. DEADLOCK AND DEADLOCK HANDLING METHODS (SOME YOU CAN FIND IN NOTES AS WELL - FOR RE-START CHECK YT VIDEO LINK)
+  * WHY DEADLOCK - PROBLEM WITH SEMAPHORE (DEADLOCK AND STARVATION) - FROM PART 3 ABOVE CONTINUATION. CHECK THAT FIRST
+    * In here however we are looking for improper use of signal() and wait() operation to cause deadlock and starvation.
+    * But most scenario, it is due to when two process P1 and P2 are using resources R1 and R2 respectively. And now they require other resources
+      * Let say now P1 needs resource R2. But since it is being used by P2 in its critical section
+      * and simultaneously P2 required resource R1 which is being used by P1 in it's CS.
+      * so since both the process requires each others resource to complete there task in CS. and also unable to let go of there resource as they can't come out of cS.
+      * So this gives raise to Deadlock.
+  * YT LINK - https://www.youtube.com/watch?v=_zOTMOubT1M&list=PLKvlVXf2hXAPrRXE_B8LWW25r5DJVe7Yv&ab_channel=KnowledgeGATEbySanchitSir
+  * https://www.youtube.com/watch?v=xw_OuOhjauw&list=PLmXKhU9FNesSFvj6gASuWmQd23Ul5omtD
+  * DEADLOCK DEFINITION -
+    * In a multiprogramming system, a number of process compete for limited number of resources and if a resource is not available at that instance then process enters into waiting state.
+    * If a process unable to its waiting stated indefinitely, because the resources requested by it are held by another waiting process, then system is said to be in deadlock
+    * Deadlock - Goes upto infinite time and still no progress. (Waiting is infinite).
+    * Starvation - Goes for finite time and progress can be later achieved. (But not sure how long is this finite time. either 1 year or 100 years)
+  * SYSTEM MODEL (Model followed by every process for execution)
+    * Step 1 - Every process will request for the resource
+    * Step 2 - If entertained then, process will use the resource
+    * Step 3 - Process must release the resource after use.
+  * FOUR NECESSARY CONDITION OF DEADLOCK (REQUIRED CONDITION TO GET INTO DEADLOCK - THIS IS ON THE CONTEXT/BASIS OF RESOURCE)
+    * 1. MUTUAL EXCLUSION - At least one Resource should be in non-sharable mode i.e. mutual exclusion. e.g. printer.
+      * So semaphore brought Mutual exclusion to achieve synchronization of process. But it also puts us in new issue called Deadlock and starvation
+      * IF Resource were not mutual exclusion - then deadlock will never occur as that resource can be shared.
+    * 2. HOLD AND WAIT - When a process is holding one Resource already and asks for other resource which is being held by other process.
+      * So it is better for process, that unless all the resources it require is available, until then don't hold any resource. This is one of the solution we will learn Later.
+      * Also waiting for all the resource, the process can go in starvation which is not good.
+      * IF Resource would not be in hold and wait - then a process can release its resource after waiting for sometime,
+      * and other process can use this resource and deadlock can be avoided
+    * 3. NO PRE-EMPTION - A process can't pre-empt (mean snatch) resource from other resource.
+      * Unless other process release the required resource voluntarily, the process can't snatch resource from other process which is holding the required resource.
+      * IF Resource were Pre-Empted - then other process can snatch the required resource from other process and deadlock can be avoided
+    * 4. CIRCULAR WAIT
+      * WHY CIRCULAR WAIT is must for DEADLOCK process system, Even if all three process are in interdependent P1 →> P2 →> P3.
+      * Then once P3 completes its task then P2 can get the resource and then P1 will also get the resource once P2 completes. So the deadlock is avoided.
+      * So to actuall create the deadlock, circular wait must be there. That is P3 must be dependent on resource present in P1. Then only deadlock will actually happen
+      * in this three process system, even if in this 3 process system we have Mutual Exclusion, Hold and Wait and Non-Premption, circular wait is most.
+      * Else deadlock cannot happen.
+      * So we are saying all these 4 conditions are required to create deadlock. Not alone they will create the deadlock.
+    * So if any of this above condition is not there then deadlock will not happen.
+  * DEADLOCK HANDLING METHODS HOW TO AVOID DEADLOCK IN OUR SYSTEM)
+    * 1. PREVENTION (More detail below)
+      * This says that you make an environment or solution such that deadlock never happens.
+      * Best approach - A good approach. Don't want to do any Deadlock
+      * Definition - Means design such a system which voidate at least one of hour necessary conditions of dead lock and ensure independence from dead lock
+    * 2. AVOIDANCE
+      * This says, that we try to avoid deadlock during runtime.
+      * Little lazy as compared to prevention - Intention here is not to become successful. but more like to avoid being failing.
+      * Definition - System maintains a sest of data using which it takes a decision whether to entertain a new request or not, to be in safe state.
+      * Example like Bankers Algorithm
+    * 3. DETECTION AND RECOVERY
+      * This says, first lets have deadlock to occur, then we will see how to recover from that deadlock by some means or approach accordingly.
+      * Lazier than Avoidance - This says why to learn fro al lthe deadlocks but only learn and work for those  deadlock which is happening.
+      * Definition - Here we wait until deadlock occurs and once we detect it, we recover from it.
+    * 4. IGNORANCE
+      * This is very lazy approach. Also called as ostrich algorithm.
+      * This says, that just ignore the problem as if it does not exist. (Just reboot the system if system hangs)
+      * Laziest method - They don't care about the deadlock.
+      * Definition - We ignore the problem as it it does not exist.
+      * Example like in home applications. Windows, linux system which we work in our home. Just switch off and restart, the problem is resolved.
+      * Example like In whole year power is cut for just 10-15 mins only. Then it make sense not to buy generator unnecessarily. So this means ignorance.
+        * But if this is hospital then we must add generator as the risk can risk life of patients.
+        * If this was a school, then there we don't need generator.
+      * Example if power cut like 4-5 hours per day, then we need generator. So this time we not do ignorance.
+    * #1 PREVENTION (DETAIL LEARNING - DEADLOCK PREVENTION)
+      * If this 4 conditions occurs together then deadlock happens (mutual exclusion, hold and wait, no pre-emption, circular wait). Called necessary condition for deadlock.
+      * So if we remove any one of above necessary condition then deadlock never happens.
+      * Can we prevent mutual exclusion
+        * No we can't as one process use one resource, Resource can't be shared when other process is using. Hardware Os is made in such way.
+      * Can we prevent hold and wait - Yes, we have the following approach
+        * Conservative approach
+          * A process is allowed to start execution if and only if it has acquired all the required resources
+          * It is very less efficient (because resources keep on being in hold/waiting so throughput decreases),
+          * not implementable - we can't define the resource requirement until the process exactly starts so bit unimplementable,
+          * Advantages - easy, deadlock independence
+        * Do not hold
+          * When proceeding further in instructions in program codes, before requesting new resource first the previous resources need to be free first then acquire new required resources.
+          * Implementable and efficient
+        * Wait time out
+          * We will put maximum time bound of waiting of required resources, If until then you don't get the resources you need then, just let go of the resources you already have.
+      * Can we prevent no pre-emption
+        * Forcefull pre-emption
+          * We will allow forcefull pre-empting resources from other process to get the required resources.
+          * Only high priority process can take forcefully from low priority process. So this way it works fine.
+          * Process which are in waiting state must be selected as victim rather than process in running state.
+      * Can we prevent circular wait
+        * p1 has R1 (Waiting for R2) and P2 has R2 (waiting for R1). This is called circular wait.
+        * Here we re-update resource requirement for both P1 and P2 same. Like R1 and then R2. So if any one of process takes R1, then other never takes R2. As both need R1.
+        * So if request orders are same for both the process, then we can avoid circular wait and hence deadlock can be prevented.
+        * But the problem is no one knows which process needs what resources. Even process can't tells that until it is executed.
+        * So to handle this we can make Resource list in Sequence, and allow all process to get resources in either increasing or decreasing order
+        * Like process will generate resource as R1 and then R6 and then R10. so it should be in increasing, hence we will never fall in deadlock
+    * #2 AVOIDANCE (DETAIL LEARNING - DEADLOCK AVOIDANCE)
+      * A deadlock-avoidance algorithm dynamically examines the resource-allocation state.
+      * The resource-allocation state is defined by the number of available and allocated resources and the maximum demands of hte processes before allowing that request first.
+      * We check, if there exist the state of resources which satisfies the current need of some process.
+      * More learn in YT link (It's totally see and learn only) -
+      * BANKER'S ALGORITHM
+        * See in that same YT
+        * First check which process requires which all resources, And how many resource in resource table is avialable/free. If it satisfies then complete that process first
+        * Then once that task is done, all the resources of that process is free. so now check next process with it's requirement and from avaiable resources table.
+        * and so on this way bankers algorithm is used to resolve deadlock avoidance.
+  * RESOURCE ALLOCATION GRAPH (See in my notes pdf)
+    * SINGLE INSTANCE OF A RESOURCE
+    * MULTI-INSTANCE OF A SAME RESOURCE (EXAMPLE MULTIPLE PRINTERS) - Here even in circular wait if we have multiple instance then deadlock won't happen
+  * BANKER'S ALGORITHM WITH NUMERICAL (See in my notes pdf.)
+    * ..
 * --- < END > ------
 
 
@@ -918,6 +1022,9 @@
 
 ### 13. OS INTERVIEW QUESTIONS / OS QUIZ AND GATE PYQ'S
 * .
+
+
+
 
 
 
