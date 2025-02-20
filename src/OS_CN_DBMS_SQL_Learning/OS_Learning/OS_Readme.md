@@ -35,7 +35,7 @@
 
 
 ## MY TOPICS WISE OS LEARNING AND ARRANGEMENTS (INDEX OF OS - LEARNING TOPIC WISE) - FOLLOWING GFG TOPICWISE
-* Precise idea of topicwise learning you can check here - https://www.geeksforgeeks.org/operating-systems/
+* Precise idea of topicwise learning you can check here (index is there in this page) - https://www.geeksforgeeks.org/operating-systems/ 
 * We are following heading topics of this geeksforgeeks sequence wise only
 ### 0. EXTRAS TOPICS (Probably comes in OS Basics)
 #### Boot Process, Booting, BIOS, Bootstrap Loader (BootLoader)
