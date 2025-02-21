@@ -41,32 +41,32 @@
 #### Boot Process, Booting, BIOS, Bootstrap Loader (BootLoader)
 * This topic is added in your notes in old notebook only.
 
-### 1. OS BASICS
-#### What is Operating System?
-#### Functions of Operating Systems
-#### Types of Operating Systems
-#### Need and Functions of Operating Systems
-#### Commonly Used Operating System
-* .
+### 1. OS BASICS (TO LEARN FROM EITHER GFG OR YT OR INTERVIEWBIT PDF - YOU CAN LEARN LATER DURING INTERVIEW ALSO - DON'T WORRY. MAIN TOPCIS DONE)
+* 1. INTRO
+  * What is Operating System?
+  * Functions of Operating Systems
+  * Types of Operating Systems
+  * Need and Functions of Operating Systems
+  * Commonly Used Operating System
+* 2. STRUCTURE OF OPERATING SYSTEM
+  * Operating System Services
+  * Introduction of System Call
+  * System Programs in Operating System
+  * Operating Systems Structures
+  * History of Operating System
+  * Booting and Dual Booting of Operating System
+* 3. TYPES OF OS
+  * Batch Processing Operating System
+  * Multiprogramming in Operating System
+  * Time Sharing Operating System
+  * What is Network Operating System
+  * Real Time Operating System (RTOS)
+* 5. THREADS IN OS
+  * Thread in Operating System
+  * Threads and its types in Operating System
+  * Multithreading in Operating System
 
-### 2. STRUCTURE OF OPERATING SYSTEM
-#### Operating System Services
-#### Introduction of System Call
-#### System Programs in Operating System
-#### Operating Systems Structures
-#### History of Operating System
-#### Booting and Dual Booting of Operating System
-* .
-
-### 3. TYPES OF OS
-#### Batch Processing Operating System
-#### Multiprogramming in Operating System
-#### Time Sharing Operating System
-#### What is Network Operating System
-#### Real Time Operating System (RTOS)
-* .
-
-### 4. PROCESS MANAGEMENT (RE-UPDATED INDEX BY MY LEARNING)
+### 2. PROCESS MANAGEMENT (RE-UPDATED INDEX BY MY LEARNING)
 * 1. Introduction to Process Management
   * Pre-requisites Topics
     * Process and Threads
@@ -96,6 +96,16 @@
     * Readers-Writers Problem | Set 1 (Introduction and Readers Preference Solution)
     * Dining Philosophers Problem Using Semaphores
     * Hardware Synchronization Algorithsm : Unlock and Lock, test and Set, Swap
+* 5. DEADLOCKS AND DEADLOCK HANDLING METHODS
+  * Introduction of Deadlock in Operating System
+  * Conditions for Deadlock in Operating System
+  * Banker's Algorithm in Operating System
+  * Wait for Graph Deadlock Detection in Distributed System
+  * Handling Deadlocks
+  * Deadlock Prevention and Avoidance
+  * Deadlock Detection and Recovery
+  * Deadlock Ignorance in Operating System
+  * Recovery from Deadlock in Operating System
 * .
 * .--MY LEARNING BELOW--.
 #### MY COMPLETE TOPIC WISE LEARNING ABOUT PROCESS MANAGEMENT (WITH TOPIC WISE DEEP LOW LEVEL LEARNING)
@@ -650,25 +660,7 @@
     * ..
 * --- < END > ------
 
-### 5. THREADS IN OS
-#### Thread in Operating System
-#### Threads and its types in Operating System
-#### Multithreading in Operating System
-* .
-
-### 6. DEADLOCKS AND DEADLOCK HANDLING METHODS
-#### Introduction of Deadlock in Operating System
-#### Conditions for Deadlock in Operating System
-#### Banker's Algorithm in Operating System
-#### Wait for Graph Deadlock Detection in Distributed System
-#### Handling Deadlocks
-#### Deadlock Prevention and Avoidance
-#### Deadlock Detection and Recovery
-#### Deadlock Ignorance in Operating System
-#### Recovery from Deadlock in Operating System
-* .
-
-### 7. MEMORY MANAGEMENT (GFG TOPIC INDEX - ENHANCED BY MY LEARNING)
+### 3. MEMORY MANAGEMENT (GFG TOPIC INDEX - ENHANCED BY MY LEARNING)
 * 1. Implementation of Contiguous Memory Management Techniques
   * A. Fixed (or static) Partitioning
   * B. Variable (or Dynamic) Partitioning (Below are dynamic allocation technique for contiguous memory allocation)
@@ -967,7 +959,7 @@
       * Nothing about this. not so important
 * --<END>--
 
-### 8. STORAGE MANAGEMENT
+### 4. STORAGE MANAGEMENT
 #### Storage Management
 #### File Systems in Operating System
 #### File Allocation Methods

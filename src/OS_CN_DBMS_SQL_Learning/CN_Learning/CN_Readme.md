@@ -143,3 +143,6 @@
 * 16. Emerging Networking Trends
   * 5G and Beyond
   * Network Slicing in 5G
+
+## MY DEEP LEARNING VIA YOUTUBE (IN DEPTH UNDERSTANDING TOPIC WISE)
+* https://www.youtube.com/watch?v=lv_aTqoHCrM&list=PLgwJf8NK-2e6fvY8yegkzDBiK7ywj8ZhK&index=1&ab_channel=EngineeringFunda
