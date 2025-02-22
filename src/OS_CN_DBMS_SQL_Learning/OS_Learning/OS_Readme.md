@@ -4,6 +4,7 @@
 * After a long period of learning to understand you must first watch YT, and then Topics notes added here.
 * For revision only, you can peek into interview and here fast topic notes added below.
 
+
 ## ABOUT NOTES ADDED IN THIS REPO FOR OS
 * 1. Booting_MyNotes_OS.pdf
   * Learn this for understanding booting process in OS. You can entirely follow this. Good notes
@@ -19,6 +20,7 @@
   * Can be ignored, but read once.
 * 5. YutubeNote_OS_Process_ProcessManagement_Part2.pdf
   * Can be ignored, but read once.
+
 
 ## WAY TO LEARN
 * If revision then interviewbit pdf is fine and some notes below is fine. 
@@ -37,6 +39,7 @@
 ## MY TOPICS WISE OS LEARNING AND ARRANGEMENTS (INDEX OF OS - LEARNING TOPIC WISE) - FOLLOWING GFG TOPICWISE
 * Precise idea of topicwise learning you can check here (index is there in this page) - https://www.geeksforgeeks.org/operating-systems/ 
 * We are following heading topics of this geeksforgeeks sequence wise only
+* MOTIVE OF THIS LEARNING - You should learn things such that you can explain to your interviewer like you are teaching them that topic. That level of knowledge you should have.
 ### 0. EXTRAS TOPICS (Probably comes in OS Basics)
 #### Boot Process, Booting, BIOS, Bootstrap Loader (BootLoader)
 * This topic is added in your notes in old notebook only.
@@ -65,6 +68,121 @@
   * Thread in Operating System
   * Threads and its types in Operating System
   * Multithreading in Operating System
+* .
+* .--MY LEARNING BELOW--.
+#### MY COMPLETE TOPIC WISE LEARNING ABOUT PROCESS MANAGEMENT (WITH TOPIC WISE DEEP LOW LEVEL LEARNING)
+* Youtube Found - Can refer this to understand in video  :  
+* Re-arranged according to actual learning techniques and flow (Bit mixed in GFG but topics are well explained)
+#####  Flow of Learning is Like this (For Deep Learning in YT follow - mentioned above) (Follow less of my notes added in OS repo)
+* 1. WHAT IS OPERATING SYSTEM
+  * INTRO
+    * Operating system is system software
+    * It acts as an intermediatory between h/w and user. Remember - you can (user) also directly access H/w but it will not be efficient and convenient. so we need os.
+    * It is resource manager - manage system resrorces in an unbiased manner for both s/w and h/w
+    * Provides a platform on which other application programs are installed. Can directly install.
+  * ABSTRACT VIEW OF SYSTEM
+    * See in YT for diagram - https://www.youtube.com/watch?v=YwqexcfbucE&list=PLmXKhU9FNesSFvj6gASuWmQd23Ul5omtD&index=4&ab_channel=KnowledgeGATEbySanchitSir
+    * HW => OS => System and Application Programs (Like VLC, MS-Office, Compiler) => Users
+    * Example a user wants to play movie on VLC Media Player. Then OS will ask permission to H/W to allow to play the movie in Monitor H/W and CPU to process that play. So this is how it works.
+  * GOALS AND FUNCTIONS OF OS
+    * YT link - https://www.youtube.com/watch?v=ENYFsXTaV2Y&list=PLmXKhU9FNesSFvj6gASuWmQd23Ul5omtD&index=5&ab_channel=KnowledgeGATEbySanchitSir 
+    * GOALS of OS Means what we have to achieve at the end. To accomplish this Goals we have to do some good functions by our OS.
+    * So this is different between Goals and Functions of OS
+      * GOALS OF OS
+        * Primary Goal - Convenience / User friendly 
+          * Why this is primary, let's take example. You know linux is more efficient, more secure, still people use Windows more why
+          * Because windows is more Convenience and user friendly, so it is primary goal.
+        * Secondary Goal - Efficiency, Free
+      * FUNCTIONS OF OS
+        * To Achieve this above mentioned goals, OS should have following functionalities in it.
+          * 1. Process Management
+          * 2. Memory Management
+          * 3. I/O Device Management
+          * 4. File Management
+          * 5. Network Management
+          * 6. Security and Protection
+* 2. TYPES OF OS / EVOLUTION OF OS 
+  * YT - https://www.youtube.com/watch?v=VtqPyXDaMr4&list=PLmXKhU9FNesSFvj6gASuWmQd23Ul5omtD&index=6&ab_channel=KnowledgeGATEbySanchitSir
+  * OS STARTED WITH MAINFRAME COMPUTERS
+    * It has simple operations. They were not UI Interactive OS.
+    * These were called jobs where we have to give program, input data and control instructions at the beginning only.
+    * It's like simple calculator stuffs.
+    * OS has simple task, where one job is done, then moved to next job when current job is done. 
+    * Memory were limited then. CPU works poorer than.
+    * So to resolve this issue Batch Processing OS came into play
+  * BATCH PROCESSING OS
+    * Here jobs with similar needs are batched together and executed through the processes as s group.
+    * Example all C related programs and grouped together and fortran related programs are grouped together.
+    * So when C related programs comes then we will load Assemblers and compilers for C language. Once all jobs done.
+    * Then we unload C assemblers and load FORTRAN/COBOL assembler. So this way memory and time is saved.
+    * Same batch requires same environment needs.
+    * Disadvantages - Memory limitations. Interaction of I/P and O/P devices directly with CPU.
+    * As CPU has no buffer. So CPU remains idle, as job queue/buffer is empty.
+  * SPOOLING
+    * ... no video on it
+  * MULTIPROGRAMMING OS
+    * YT link - https://www.youtube.com/watch?v=OOLy8jnl1hA&list=PLmXKhU9FNesSFvj6gASuWmQd23Ul5omtD&index=7&ab_channel=KnowledgeGATEbySanchitSir
+    * When more than one process in Main Memory, this is called Multiprogramming.
+    * Multiprogramming means more than one process in Main Memory which are ready to execute.
+    * Remember here we have one CPU, So at a time only one process can run in a CPU at a time. Multiprogramming does not mean multiple process in CPU.
+    * If we have more than one CPU, then we call it multiprocessing, which we learn about it later.
+    * CPU will keep on picking the process from Main Memory and keeps on doing it task.
+    * So here CPU utilization is maximized.
+    * However, a process generally requires CPU time and I/O time.
+    * CPU is idle in any one of this two case - 1. No process in Main Memory left 2. When it is context switching (Means switching between process) 3. Waiting for I/O devices, but here it won't wait and try doing other programs from Main Memory.
+    * So the conclusion is - In main memory we will have multiple process but CPU will be doing one process at a time. So this way of keeping multilple programs/process in Main Memory is the concept of Multiprogramming.
+    * Advantage
+      * High CPU Utilization
+      * Less waiting time, response time etc
+      * May be extended to multiple users - rather than multiple program/process
+      * Very useful these days, as load is very high
+    * Disadvantage
+      * Difficult scheduling of Process
+      * Main memory management is required
+      * Memory fragmentation - empty irregular space in main memory
+      * Paging (Non-contiguous memory location)
+    * Remember - Multiprogramming does not means multiple processes are running at a time. As we have only one CPU, so the processor do context switching between multiple process so fast that we feel like as if multiple programs are running.
+    * Here CPU is utilized almost 100%. As long as we have process in Main memory.
+  * MULTITASKING OS / TIME SHARING / FAIR SHARE / MULTIPROGRAMMING WITH ROUND-ROBIN
+    * YT link - https://www.youtube.com/watch?v=UcXWaeRikSo&list=PLmXKhU9FNesSFvj6gASuWmQd23Ul5omtD&index=8&ab_channel=KnowledgeGATEbySanchitSir
+    * We want that CPU instead of working on single process, it should also leave current process and move to other process as well. 
+    * CPU should do this task so fast and process other program/process as well rather than just one process.
+    * So this concept is called multitasking. or time sharing or fair share or multiprogramming with round-robin.
+    * Remember - Here we are only having one CPU system.
+    * This we are able to do because CPU processor is very fast that we are unable to identify.
+    * So we can listen music, browse and run excel at a same time - CPU will process one by one each of them in time sharing manner. So we user will feel illusion of as if all these program are running parallely.
+    * Multitasking is multiprogramming with time-sharing
+    * Only one CPU but switches between processes so quickly that it give the illusion that all esecuting at same time
+    * The task in multitasking may refer to multiple threads of the same program.
+    * Main ides is better response time and executing multiple process together.
+    * Disadvantages - One CPU will have high load as it is doing multiple task by context switching between programs.
+    * So we come into multiprocessing
+  * MULTIPROCESSING OS
+    * YT link - No vide made on it.
+    * It's just we have multiple processor CPU in our system. So load will decrease.
+    * 2 processor - dual core, 4 process - quad core, 8 processor - octa core system.
+  * REAL TIME OS
+    * Here the processing time is measured in tenths of seconds. This system is time-bound and has a fixed deadline.
+    * Mostly used in industrial control, flight control, time bomb, missile launcher, Heart pacemakers
+    * Two types
+      * Hard Real-time os
+        * The task should be completed in exact given time.
+      * soft Real-time os
+        * The task should be completed in given time range.
+  * NETWORK OS
+    * Network OS is software that connects multiple devices and ocmputers on the network and allows them to share resources on the netowork.
+    * It creates and manges user accounts on the network. Controls access on network
+    * Two types
+      * Peer to Peer
+        * Used on LAN
+      * Client/server 
+        * Central server. This Os is good for the big networks which provide many services.
+    * Examples like Microsoft Windows Server, Unix/Linux, Like you do in HVD in BofA.
+  * 
+
+      
+
+
 
 ### 2. PROCESS MANAGEMENT (RE-UPDATED INDEX BY MY LEARNING)
 * 1. Introduction to Process Management
