@@ -48,23 +48,22 @@
 * 1. INTRO
   * What is Operating System?
   * Functions of Operating Systems
-  * Types of Operating Systems
+* 2. Types of Operating Systems
+  * Batch Processing Operating System
+  * Multiprogramming in Operating System
+  * Time Sharing Operating System
+  * What is Network Operating System
+  * Real Time Operating System (RTOS)
   * Need and Functions of Operating Systems
   * Commonly Used Operating System
-* 2. STRUCTURE OF OPERATING SYSTEM
+* 3. STRUCTURE OF OPERATING SYSTEM
   * Operating System Services
   * Introduction of System Call
   * System Programs in Operating System
   * Operating Systems Structures
   * History of Operating System
   * Booting and Dual Booting of Operating System
-* 3. TYPES OF OS
-  * Batch Processing Operating System
-  * Multiprogramming in Operating System
-  * Time Sharing Operating System
-  * What is Network Operating System
-  * Real Time Operating System (RTOS)
-* 5. THREADS IN OS
+* 4. THREADS IN OS
   * Thread in Operating System
   * Threads and its types in Operating System
   * Multithreading in Operating System
