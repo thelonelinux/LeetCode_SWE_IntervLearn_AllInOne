@@ -61,7 +61,6 @@
   * Introduction of System Call
   * System Programs in Operating System
   * Operating Systems Structures
-  * History of Operating System
   * Booting and Dual Booting of Operating System
 * 4. THREADS IN OS
   * Thread in Operating System
@@ -119,7 +118,7 @@
     * As CPU has no buffer. So CPU remains idle, as job queue/buffer is empty.
   * SPOOLING
     * ... no video on it
-  * MULTIPROGRAMMING OS
+  * MULTIPROGRAMMING OS (EXAMPLE WINDOWS, UNIX, MACOS, ETC)
     * YT link - https://www.youtube.com/watch?v=OOLy8jnl1hA&list=PLmXKhU9FNesSFvj6gASuWmQd23Ul5omtD&index=7&ab_channel=KnowledgeGATEbySanchitSir
     * When more than one process in Main Memory, this is called Multiprogramming.
     * Multiprogramming means more than one process in Main Memory which are ready to execute.
@@ -177,7 +176,55 @@
       * Client/server 
         * Central server. This Os is good for the big networks which provide many services.
     * Examples like Microsoft Windows Server, Unix/Linux, Like you do in HVD in BofA.
-  * 
+  * DISTRIBUTED OS (SEE IN YT NOTES PDF METHODOLOGIES)
+    * ..
+* 3. STRUCTURE OF OS (METHODOLOGIES FOR IMPLEMENTATION OF OS SERVICES)
+  * Learn  from the notes pdf attached - YutubeNote_OS_Functions_Methodologies_Intro.pdf (Covers enough details - learn this only and some yt)
+  * some yt you can see though apart from pdf
+    * https://www.youtube.com/watch?v=sUw32fUZgNk&ab_channel=Lastmomenttuitions (User space vs kernel space)
+    * https://www.youtube.com/watch?v=88vlIFfsmKM&ab_channel=Lastmomenttuitions (Monolithic vs Micro kernel)
+  * BOOTING IN OS
+    * SEE THIS GFG ENOUGH IMP AND ALSO SEE YOUR PDF
+    * YT - https://www.geeksforgeeks.org/what-happens-when-we-turn-on-computer/
+  * USER MODE VS KERNEL MODE (USER SPACE VS KERNEL SPACE)
+    * USER MODE 
+      * Example like to write addition function code in program
+      * If a user program or application corrupts, that single program application stops misbehaving or working.
+    * KERNEL MODE (More about kernel and its types you can see here - https://www.geeksforgeeks.org/kernel-in-operating-system/)
+      * Open a program or file and show your program add in console. 
+      * Kernel is mastermind of os. All OS operations are taken care by kernel
+      * If kernel programs/functions gets corrupts, the whole OS crashes.
+      * Kernel is the core of OS. Kernel is the one helps in Memory Management, Process Management, File Management etc.
+      * Kernels are the heart of OS, managing how hardware and software communicate and ensuring everything runs smoothly.
+      * TYPES OF KERNEL
+        * MONOLITHIC KERNEL (example UNIX,Linux)
+        * MICRO KERNEL (example mach)
+        * HYBRID KERNEL (mixed of monolithic and micro kernel - example like windows NT)
+        * EXO KERNEL
+        * NANO KERNEL
+  * SYSTEM CALLS 
+    * Interface between user and kernel. System call is send from user to do some kernel level task.
+    * System call exposes all functionalities of kernel.
+    * System call protects and keep kernel safe from user misuse or corrupted programs.
+    * More about system calls, working, kernel and user relations see in pdf only and understand.
+  * SYSTEM PROGRAMS (SEE IN PDF MENTIONED ABOVE)
+    * ..
+  * INTERRUPT MECHANISM (SEE IN PDF MENTIONED ABOVE)
+    * ..
+  * ....ETC (SEE IN PDF MENTIONED ABOVE)
+    * ..
+* 4. THREADS IN OS (MULTITHREADING)
+  * FROM GFG (SEE IN BELOW TOPIC SECTION IN THIS GFG LINK FOR MULTITHREADING - https://www.geeksforgeeks.org/operating-systems/?ref=lbp)
+    * Open each link and learn, for yt check somewhere suitable.
+    *  Multithreading:
+    *  Operating System | Thread
+    *  Threads and its types
+    *  Operating System | User Level thread Vs Kernel Level thread
+    *  Process-based and Thread-based Multitasking
+    *  Multi threading models
+    *  Benefits of Multithreading
+    *  Operating System | Remote Procedure call (RPC)
+  * THREADS VS PROCESS
 
       
 
