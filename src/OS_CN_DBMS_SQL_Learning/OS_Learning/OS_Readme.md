@@ -281,7 +281,8 @@
     * Asynchronous cancellation - 
     * Deferred cancellation - 
     * Ignore more depth in this
-  * 
+  * THREADS AND HEAP MEMORY SPACE, WHERE HEAP LIES
+    * https://www.youtube.com/watch?v=4rLW7zg21gI&t=107s&ab_channel=ByteByteGo
 * --- < END > ------
 
 ### 2. PROCESS MANAGEMENT (RE-UPDATED INDEX BY MY LEARNING)

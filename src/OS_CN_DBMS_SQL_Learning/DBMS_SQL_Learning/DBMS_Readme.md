@@ -1,15 +1,14 @@
 # DBMS SQL Learning
-* Here also you can learn from scaler or gfg and later some videos to understand you can add accrodingly.
-* Topicwise you can find in gfg and scaler
-* Later interview questions list also you can find there only
-* Extra learning also you can add here only. No Notes Dependencies. 
+* YT Learn for tough topics
+* Scaler for interviewbit,  GFG for notes
+* HandMade notes will be added if any better found then.
 
 ## WAY TO LEARN
 * Just learn the interview pdf first. (As you already know most of the topics and can explain easily to interviewer)
 * If any difficult topic then get it from the index topic wise below and youtube and done.
 * No need to do very deep learning. As during interview you have to revise anyways.
 * but if you not learn for long time then you have to restart always so.
-### MOST IMPORTANT LEARN THESE BELOW TOPICS FOR MORE TOUGH INTERVIEW
+### MOST IMPORTANT LEARN THESE BELOW TOPICS FOR MORE TOUGH INTERVIEW (SEE LAST OF THIS PAGE, MY LEARNING DONE THERE)
 * 1. INDEXING AND CLUSTERING
 * 2. TRANSACTIONAL DB, SERIALIZABLE
 * 3. JOINS
@@ -27,6 +26,7 @@
 * Parallely do some youtube videos series for important difficult topics.
 * - 
 * For now following GFG Topicwise : https://www.geeksforgeeks.org/dbms/
+
 ### GFG TOPIC WISE DBMS LEARNING
 #### 1. BASICS OF DBMS
 ##### 1. INTRODUCTION OF DBMS
@@ -126,6 +126,12 @@
 ##### 1. SET 1, SET 2, SET 3
 ##### end ------
 
-#### 10. DBMS INTERVIEW QUESTIONS AND LAST MINUTE NOTES
 ##### end ------
 
+
+## ONLY THIS BELOW TOPICS LEARNING FOR NOW - AS TOUGH AND DIFFICULT TO UNDERSTAND AND USUALLY ASK IN INTERVIEW FOR MOST OF THE TIME
+### MY LEARNING
+* 1. NORMALIZATION (FUNCTIONAL DEPENDENCIES AND ANOMALY)
+* 2. TRANSACTIONAL DB (ACID PROPERTIES) AND SERIALIZABLE AND CONCURRENCY ISSUE
+* 3. INDEXES (CLUSTERING AND NON-CLUSTERED)
+* 4. JOINS
