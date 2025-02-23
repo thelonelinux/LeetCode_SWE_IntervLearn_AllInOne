@@ -37,9 +37,11 @@
 
 
 ## MY TOPICS WISE OS LEARNING AND ARRANGEMENTS (INDEX OF OS - LEARNING TOPIC WISE) - FOLLOWING GFG TOPICWISE
-* Precise idea of topicwise learning you can check here (index is there in this page) - https://www.geeksforgeeks.org/operating-systems/ 
-* We are following heading topics of this geeksforgeeks sequence wise only
-* MOTIVE OF THIS LEARNING - You should learn things such that you can explain to your interviewer like you are teaching them that topic. That level of knowledge you should have.
+* MY LEARNING AND INFORMATION ABOUT THIS LEARNING
+  * Precise idea of topicwise learning you can check here (index is there in this page) - https://www.geeksforgeeks.org/operating-systems/ 
+  * We are following heading topics of this geeksforgeeks sequence wise only
+  * MOTIVE OF THIS LEARNING - You should learn things such that you can explain to your interviewer like you are teaching them that topic. That level of knowledge you should have.
+
 ### 0. EXTRAS TOPICS (Probably comes in OS Basics)
 #### Boot Process, Booting, BIOS, Bootstrap Loader (BootLoader)
 * This topic is added in your notes in old notebook only.
@@ -67,11 +69,7 @@
   * Threads and its types in Operating System
   * Multithreading in Operating System
 * .
-* .--MY LEARNING BELOW--.
 #### MY COMPLETE TOPIC WISE LEARNING ABOUT PROCESS MANAGEMENT (WITH TOPIC WISE DEEP LOW LEVEL LEARNING)
-* Youtube Found - Can refer this to understand in video  :  
-* Re-arranged according to actual learning techniques and flow (Bit mixed in GFG but topics are well explained)
-#####  Flow of Learning is Like this (For Deep Learning in YT follow - mentioned above) (Follow less of my notes added in OS repo)
 * 1. WHAT IS OPERATING SYSTEM
   * INTRO
     * Operating system is system software
@@ -215,20 +213,76 @@
     * ..
 * 4. THREADS IN OS (MULTITHREADING)
   * FROM GFG (SEE IN BELOW TOPIC SECTION IN THIS GFG LINK FOR MULTITHREADING - https://www.geeksforgeeks.org/operating-systems/?ref=lbp)
-    * Open each link and learn, for yt check somewhere suitable.
-    *  Multithreading:
-    *  Operating System | Thread
-    *  Threads and its types
-    *  Operating System | User Level thread Vs Kernel Level thread
-    *  Process-based and Thread-based Multitasking
-    *  Multi threading models
-    *  Benefits of Multithreading
-    *  Operating System | Remote Procedure call (RPC)
   * THREADS VS PROCESS
-
-      
-
-
+    * YT see this very important - https://www.youtube.com/watch?v=LOfGJcVnvAk&list=PLBlnK6fEyqRh5YXKAPCZPVZPkdhQa9Skz&ab_channel=NesoAcademy
+    * This Yt has good stuffs to see and learn, see it once.
+    * A process is program in execution, A process contains Stack, Registers and Resources (Data, file and code).
+    * A process always will have one thread called as Main thread. 
+    * So a process always will have one thread.
+    * Also a process can have multiple threads.
+    * This different thread will have their own stack and Registers. Main thread will have their own stack and registers, Thread 1 will have other stack and registers, thread 2 will have other stack and registers.
+    * But this different thread will share the resources in that process (Resources like - Code, Data and Files)
+    * A thread is a basic unit of CPU utilization.
+    * Thread includes thread ID and Program Counter.
+    * EXAMPLE
+      * Lets say we run chrome.exe process. 
+      * So opening a tab is one thread. And downloading a item is another thread.
+      * So this way browser will do multiple task using multiple threads.
+      * Downloading and uploading happening simultaneously.
+      * If we were having single threads, then when downloading, page couldn't have uploaded, 
+      * or if uploading then downloading could not have happened.
+      * So here multithreading will help in doing different task efficiently, as there is very less time wasted in context switching as compared to multiple processes.
+  * BENEFITS OF MULTITHREADING IN A PROCESS
+    * RESPONSIVENESS - 
+      * Even if we have some other thread taking a lot of time to complete/or is blocked, then other threads keep on working.
+      * Example while downloading in chrome, downloading data won't block your uploading.
+    * RESOURCE SHARING -
+      * As data is shared, so multithreading allows application to have several different threads of activity within the same address space.
+      * No separate dedicate Memory Resource is required here. So it makes efficient and economical
+    * ECONOMY -
+      * Allocating memory and resource for process creation is costly. because threads share resources of theprocess ot which the belong,
+      * it is more economical to create and context-switch threads
+    * UTILIZATION OF MULTIPROCESSOR ARCHITECTURE - 
+      * If we hace multiple CPU system, then multiple threads will run parallely in different CPUs.
+      * So CPU will be utilized.
+      * Multithreading on a multi-CPU machine increasaes concurrency
+      * Example - If you have single thread process, then apart from having multiple CPUs,
+        * That one process will run only in one CPU utilizing that single thread in that CPU only
+        * So other CPU will remain idle and unutilized
+        * So this is how Multithreading is useful for multiprocessor architecture.
+        * So if we have 4 threads in process, and 4 cpu, then each thread will run in each cpu concurrently and the task is done efficiently.
+  * CONCURRENCY VS PARALLELISM
+    * YT see this is enough -https://www.youtube.com/watch?v=RlM9AfWf1WU&ab_channel=ByteByteGo
+      * PARALLELISM
+        * Process running alongside in different CPUs.
+      * CONCURRENCY
+        * Task is switched between one process to another to run different process by the single cpu.
+        * They looks like running parallely, But they are not parallel.
+      * Learn about MultiProcessing also. How it works with process, How it works with threads is mentioned above in process vs threads. 
+  * MULTITHREADING MODELS AND HYPERTHREADING
+    * https://www.youtube.com/watch?v=HW2Wcx-ktsc&list=PLBlnK6fEyqRh5YXKAPCZPVZPkdhQa9Skz&index=2&ab_channel=NesoAcademy
+    * TYPES OF THREADS
+      * USER THREADS - Supported above the kernel and are managed without kernel support.
+      * KERNEL THREADS - Supported and managed directly by the operating system.
+      * Ultimately, there must exist a relationship between the user threads and kernel threds.
+      * THREE COMMON WAYS OF ESTABLISHING THIS RELATIONSHIP
+        * MANY TO ONE MODEL
+        * ONE TO ONE MODEL
+        * MANY-TO-MANY MODEL
+      * No need to go deep in it.
+  * THE FORK() AND EXEC() SYSTEM CALLS
+    * https://www.youtube.com/watch?v=IFEFVXvjiHY&list=PLBlnK6fEyqRh5YXKAPCZPVZPkdhQa9Skz&index=3&ab_channel=NesoAcademy
+    * No need to go deep in it
+  * THREAD ISSUE AND THREAD CANCELLATION
+    * Thread is terminated before it complete its execution.
+    * Example - When a page is loading in browser and you click the cancel, 
+      * then there are several threads running in background to load that page. 
+      * all threads loading the page will get cancelled. some threads load links, some threads load images, text etc.
+    * Asynchronous cancellation - 
+    * Deferred cancellation - 
+    * Ignore more depth in this
+  * 
+* --- < END > ------
 
 ### 2. PROCESS MANAGEMENT (RE-UPDATED INDEX BY MY LEARNING)
 * 1. Introduction to Process Management
@@ -271,11 +325,8 @@
   * Deadlock Ignorance in Operating System
   * Recovery from Deadlock in Operating System
 * .
-* .--MY LEARNING BELOW--.
 #### MY COMPLETE TOPIC WISE LEARNING ABOUT PROCESS MANAGEMENT (WITH TOPIC WISE DEEP LOW LEVEL LEARNING)
 * Youtube Found - Can refer this to understand in video  :  https://www.youtube.com/watch?v=OrM7nZcxXZU&list=PLBlnK6fEyqRgKl0MbI6kbI5ffNt7BF8Fn&ab_channel=NesoAcademy
-* Re-arranged according to actual learning techniques and flow (Bit mixed in GFG but topics are well explained)
-#####  Flow of Learning is Like this (For Deep Learning in YT follow - mentioned above) (Follow less of my notes added in OS repo)
 * 1. PROCESS MANAGEMENT INTRO
   * Motive - To provide CPU/Process to our programs/process to get maximum throughput.
   * PROCESS AND THREADS
@@ -492,8 +543,7 @@
         * https://www.youtube.com/watch?v=uagKTbohimU&list=PLBlnK6fEyqRgKl0MbI6kbI5ffNt7BF8Fn&index=13&ab_channel=NesoAcademy
         * Communication using socket (See YT diagram)
     * RPC (Remote Procedure calls)  - further in YT - Not part in syllabus
-    * 
-* --
+    *
 * 2. CPU PROCESS SCHEDULING ALGORITHM (THIS IS TAKEN FROM YOUR WRITTEN NOTES ONLY - WELL EXPLAINED THERE ONLY. ADD CHECK IN PDF)
   * To execute multiple process in CPU, we first bring those process in RAM in ready Queue, and from here execution takes place
   * In case we are using uniprocessor (1 CPU) system, then at a time single process in CPU
@@ -538,7 +588,6 @@
     * highest priority will work for 8 time unit, then goes to medium priority which works for 6 time quant and then lowest priority queue will have 2 time quant.
     * so like this it works.
     * see in notes pdf. for gantt chat and numerical understanding of each scheduling algorithm
-* --
 * 3. PROCESS SYNCHRONIZATION (CONCURRENCY AND SYNCHRONIZATION)
   * Concurrent means running currently both the process. Parallelly you can understand.
   * Followed this YT playlist for synchronization - https://www.youtube.com/watch?v=ju4bycQQF2A&list=PL8tc66sMn9Kggk4zRPzcjXNUIDDnJKUnU
@@ -714,8 +763,7 @@
             * Rest see in YT or learn in during interview only - https://www.youtube.com/watch?v=gW67ojO9jjY&list=PL8tc66sMn9Kggk4zRPzcjXNUIDDnJKUnU&index=8&ab_channel=AnjaliSharma
         * BUSY WAITING IN CRITICAL SECTION
           * check in YT only and learn during interview only - https://www.youtube.com/watch?v=W3aZQQHUWCI&list=PL8tc66sMn9Kggk4zRPzcjXNUIDDnJKUnU&index=9&ab_channel=AnjaliSharma
-          * 
-* --
+          *
 * 4. DEADLOCK AND DEADLOCK HANDLING METHODS (SOME YOU CAN FIND IN NOTES AS WELL - FOR RE-START CHECK YT VIDEO LINK)
   * WHY DEADLOCK - PROBLEM WITH SEMAPHORE (DEADLOCK AND STARVATION) - FROM PART 3 ABOVE CONTINUATION. CHECK THAT FIRST
     * In here however we are looking for improper use of signal() and wait() operation to cause deadlock and starvation.
