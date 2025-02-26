@@ -15,3 +15,4 @@
 
 ## DIFFICULT TOPICS MY LEARNING
 * 1. JVM, JRE, JDK ARCHITECTURE, JIT, CLASSLOADER WHOLE FLOW LEARN.
+* 2. Some difficult OOPs concept also learn. Like Polymorphism and Inheritance of different types.
