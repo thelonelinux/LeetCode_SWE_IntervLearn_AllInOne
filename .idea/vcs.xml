@@ -3,5 +3,6 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/Old_AIO_SWE_Interv_Can_Ignore/SWE_Interview_AllInOne" vcs="Git" />
   </component>
 </project>
