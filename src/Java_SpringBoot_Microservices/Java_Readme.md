@@ -90,12 +90,86 @@
  
  
 ## OTHER TOPICS - INTERVIEWBIT PLUS NOTES AND LEARNING WITH PRACTICAL
+### JAVA VERSIONS AND LTS
+* See link for detail learning - https://medium.com/@a.r.m.monesan_9577/java-8-vs-java-11-vs-java-17-vs-java-21-a-comprehensive-comparison-aa4635f9c3fe
+* Java Long Term Support (Will be working for a long time)
+  * Example how angular was going very fast from angular 1 to angular 12. Like that java will also go, but in long term support 
+  * there will be no depreciation so fast for those versions. They will keep on getting support and security check from oracles 
+    * Java 8 (LTS)
+    * Java 11 (LTS)
+    * Java 17 (LTS)
+    * Java 21 (LTS)
+* 1. Overview of Java Release Cycle
+  * Starting with Java 9, Oracle introduced a new six-month release cycle. 
+  * This means a new Java version is released twice a year. 
+  * However, Long-Term Support (LTS) versions — such as Java 8, 11, 17, and now 21 — are released every few years and are supported for longer periods.
+  * To check there end of support year see in link above.
+
+### ANNOTATIONS IN JAVA
+* Link to follow - https://www.linkedin.com/pulse/java-annotations-rahul-ranjan/
+* In Layman words - 
+  * It was introduced in java 5.
+  * Annotations are java constructs which decorate a class, method, field, parameter, variable, constructor, or package.
+  * It acts like Metadata attribute to define the class.
+    * So to decorate Class we use @Controller (For Controller Class), @Service (For service class), @SpringBootApplication, @Entity, @Component and so on
+    * To decorate Method we use @Override, @PostMapping (To make that method as some Post verb)
+    * To decorate variable we use @id (To make that variable as primary key in Entity class table)
+    * To decorate parameter we use @Nullable (To make sure that parameter can be null as well)
+    * And so on.
+  * Now proceeding there are three forms of annotations that can be defined in java as follows:
+    * Marker Annotations: These are the annotations inside which no variables are declared or defined.
+    * Single-value Annotations: These are the annotations inside which only a single variable is declared or defined.
+    * Multi-value Annotations: These are the annotations inside which multiple variables of multiple types can be declared and defined.
+  * Pros & Cons
+    * Pros
+      * Readability [All the information is in a single file]
+      * Flexibility [When the class changes, no need to modify  at other place]
+      * Length [Annotations are much simpler to use.]
+    * Cons
+     * Annotations that can cause lifecycle mismatches should be avoided.
+     * ORM mapping, database configuration, hard coded config for items that may vary between deployment environments.
+     * Tightly couple code to a particular library or framework.
+  * ..
+
+  
 ### JAVA 8 - FEATURES
 * Interviewbit - https://www.interviewbit.com/blog/java-8-features/
-  * 1. FUNCTIONAL DEPENDENCY AND LAMBDA EXPRESSION
-  * 2. FOREACH METHOD
+  * 1. FUNCTIONAL INTERFACES AND LAMBDA EXPRESSION
+     * FUNCTIONAL INTERFACE
+       * Functional Interfaces means only one Abstract Method in Interface, can have many default or static method though
+       * So we can create object of this functional interfaces using lambda expression. 
+       * Example see in this above link only.
+       * java.lang. Runnable is a fantastic example of a functional interface since it has one abstract method, run ().
+       * Lambda Expression is used to implement abstract methods in shortcut manners and create object.
+       * If we had abstract method as void func(int x, int y)
+       * Then to create object using functional interface we need to implement that single abstract method which we do by the help of Lambda expression
+       * SomeInterface interfaceObject = (x,y) -> System.out.println(x+y);
+       * If abstract method as int func(int x)
+       * then 
+       * SomeInterface interfaceObject = x -> return x*4;
+    * LAMBDA EXPRESSION
+      * You may send Lambda Expression as an argument to the “forEach” method, which accepts the Functional Interface as a single parameter.
+      *       subList.forEach(sub -> System.out.println(sub));
+      * Here sub is a abstract function or say interface abstract method of functional dependency
+  * 2. FOREACH METHOD - 
+    * To iterate a list or collection (See above lambda example, this is it)
+  * 3. OPTIONAL CLASS - 
+    * This is used to check null pointer of an object and helps in reducing nullpointer exception 
+    * in our code by doing check with their methods in Optional Class which is final class.
+    * Example see in the link only mentioned in the above
+  * 4. DEFAULT AND STATIC METHODS - Introduced in Java 8
+    * In Java 8, you may add non-abstract methods to interfaces, allowing you to create interfaces with method implementation. 
+    * To construct interfaces with method implementation, use the Default and Static keywords.
+  * 5. ETC ETC.. check in link only.
+
 
 ### JAVA 11 - FEATURES
 * Interviewbit - https://www.interviewbit.com/blog/java-11-features/
   * 1. NEW HTTP AND WEB SOCKET CLIENT
   * 2. NESTED CLASSES ATTRIBUTES
+
+
+### JAVA 17 - FEATURES
+
+
+### JAVA 21 - FEATURES

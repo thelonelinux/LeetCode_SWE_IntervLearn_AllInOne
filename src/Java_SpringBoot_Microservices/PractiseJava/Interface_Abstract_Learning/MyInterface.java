@@ -4,6 +4,7 @@ package Java_SpringBoot_Microservices.PractiseJava.Interface_Abstract_Learning;
  * INTERFACE CAN'T BE FINAL
  * Final means that class can't be inherited
  */
+
 public interface MyInterface {
 
     /**
