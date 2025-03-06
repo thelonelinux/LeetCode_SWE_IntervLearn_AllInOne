@@ -60,3 +60,42 @@
   * In Method overloading method name should be same.
   * Return type should be same (Return type does not play any role in method overloading)
   * Only Parameter type or number of parameter can be different.
+* 7. Write about daemon thread and non-daemon thread
+  * https://stackoverflow.com/questions/2213340/what-is-a-daemon-thread-in-java
+  * Definition of Daemon (Computing):
+    * daemon: d(isk) a(nd) e(xecution) mon(itor) or from de(vice) mon(itor)
+      * Definition of Daemon (Computing):
+      * A background process that handles requests for services such as print spooling and file transfers, and is dormant when not required.
+      * Source: English by Oxford Dictionaries
+      * What is Daemon thread in Java?
+        Daemon threads can shut down any time in between their flow, Non-Daemon i.e. user thread executes completely.
+        Daemon threads are threads that run intermittently in the background as long as other non-daemon threads are running.
+        When all of the non-daemon threads complete, daemon threads terminates automatically.
+        Daemon threads are service providers for user threads running in the same process.
+        The JVM does not care about daemon threads to complete when in Running state, not even finally block also let execute. JVM do give preference to non-daemon threads that is created by us.
+        Daemon threads acts as services in Windows.
+        The JVM stops the daemon threads when all user threads (in contrast to the daemon threads) are terminated. Hence daemon threads can be used to implement, for example, a monitoring functionality as the thread is stopped by the JVM as soon as all user threads have stopped.* .
+  * .
+* 8. Write about serialization and non-serialization
+  * YT Added, just add the link - https://www.youtube.com/watch?v=Uxhb3IHKMQk&t=164s&ab_channel=LetsMakeAutomationEasy-PradeepNailwal
+  * Layman words converting object to store in data, file, memory or db in stream of byte. see yt for more
+* 9. Inheritance vs Composition
+  * https://stackoverflow.com/questions/2399544/difference-between-inheritance-and-composition
+* 10. Aggregation vs Association vs Composition
+  * https://stackoverflow.com/questions/14837826/association-vs-aggregation-vs-composition-in-java
+  * https://stackoverflow.com/questions/20304116/aggregation-and-composition-in-java-code
+* 11. Marker Interface
+  * https://stackoverflow.com/questions/58602321/what-is-the-point-of-marker-interface-in-java-and-why-cant-we-go-on-without-the
+
+ 
+ 
+## OTHER TOPICS - INTERVIEWBIT PLUS NOTES AND LEARNING WITH PRACTICAL
+### JAVA 8 - FEATURES
+* Interviewbit - https://www.interviewbit.com/blog/java-8-features/
+  * 1. FUNCTIONAL DEPENDENCY AND LAMBDA EXPRESSION
+  * 2. FOREACH METHOD
+
+### JAVA 11 - FEATURES
+* Interviewbit - https://www.interviewbit.com/blog/java-11-features/
+  * 1. NEW HTTP AND WEB SOCKET CLIENT
+  * 2. NESTED CLASSES ATTRIBUTES
