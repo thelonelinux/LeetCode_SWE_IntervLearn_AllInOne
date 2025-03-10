@@ -86,6 +86,8 @@
   * https://stackoverflow.com/questions/20304116/aggregation-and-composition-in-java-code
 * 11. Marker Interface
   * https://stackoverflow.com/questions/58602321/what-is-the-point-of-marker-interface-in-java-and-why-cant-we-go-on-without-the
+* 12. Threads in Java
+  * https://www.geeksforgeeks.org/java-threads/
 
  
  
@@ -120,6 +122,7 @@
     * Marker Annotations: These are the annotations inside which no variables are declared or defined.
     * Single-value Annotations: These are the annotations inside which only a single variable is declared or defined.
     * Multi-value Annotations: These are the annotations inside which multiple variables of multiple types can be declared and defined.
+  * How to create custom annotations : https://www.geeksforgeeks.org/how-to-create-your-own-annotations-in-java/?ref=ml_lbp
   * Pros & Cons
     * Pros
       * Readability [All the information is in a single file]
