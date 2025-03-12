@@ -30,13 +30,21 @@
   * This is make sure you have pom.xml file.
   * In intellijIdea, just create new project, chose maven archetype and select archetype, it will create a project wiht pom.xml
   * for spring boot, there only you have to chose spring boot when creating new project, not for spring core, framework project.
-* SPRING FRAMEWORK LEARNING AS PREREQUISITE TO LEARN SPRING BOOT - However there is also in this section below in part 3, 
+* SPRING FRAMEWORK LEARNING (JUST SEE YT LINKS PLAYLIST OF SPRING FRAMEWORK, YOU WILL UNDERSTAND ALL AND YOU NOT NEED TO DO ANY OTHER LEARNING, THEY ARE ENOUGH)
+  * YT Link Follow Part 1 (Most Important) - https://www.youtube.com/watch?v=JNeAwX_MOcU&list=PLsyeobzWxl7rFkYFysfTwBu1JBPaNNDrk&index=1&ab_channel=Telusko
+    * This will give you complete idea of Spring Framework, 
+      * Project Creation in IntellijIdea, Dependency Injection, What is bean, Bean Factory and ApplicationContext
+      * BeanFactory being deprecated, How to make object beans in different ways.
+      * Very importantly learn this, you will understand whole concept of core Spring Framework
+  * YT Link follow Part 2 (Most Important) - https://www.youtube.com/watch?v=wteFNBKs8oU&list=PLOktGWstEbloSPMJ1unePUM6RBRq5PITf&index=2&ab_channel=LazyProgrammer
+    * In this YT link, You will bit more about Spring core, beans, with good theory explanation
   * but for once learn this - https://www.geeksforgeeks.org/introduction-to-spring-framework/
+  * 
   * DEPENDENCY INJECTION 
     * THREE TYPES
       * VIA CONSTRUCTOR
       * VIA SETTER METHOD
-      * VIA FIELD INJECTION (USING @AUTOWIRED)
+      * VIA FIELD INJECTION (USING @AUTOWIRED). Like a Data Member of Class.
   * INVERSION OF CONTROL CONTAINER (BEAN CONTAINERS) 
     * TWO TYPES
       * BEAN FACTORY
