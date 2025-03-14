@@ -31,6 +31,7 @@
   * In intellijIdea, just create new project, chose maven archetype and select archetype, it will create a project wiht pom.xml
   * for spring boot, there only you have to chose spring boot when creating new project, not for spring core, framework project.
 ### SPRING FRAMEWORK LEARNING (JUST SEE YT LINKS PLAYLIST OF SPRING FRAMEWORK, YOU WILL UNDERSTAND ALL AND YOU NOT NEED TO DO ANY OTHER LEARNING, THEY ARE ENOUGH)
+* Check other repo(Spring_Framework_IntervLearning for indepth Spring framework, core and mvc learning with code)
   * YT Link Follow Part 1 (Most Important) - https://www.youtube.com/watch?v=JNeAwX_MOcU&list=PLsyeobzWxl7rFkYFysfTwBu1JBPaNNDrk&index=1&ab_channel=Telusko
     * This will give you complete idea of Spring Framework, 
       * Project Creation in IntellijIdea, Dependency Injection, What is bean, Bean Factory and ApplicationContext
