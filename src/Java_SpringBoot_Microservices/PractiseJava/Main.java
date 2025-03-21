@@ -1,6 +1,8 @@
 package Java_SpringBoot_Microservices.PractiseJava;
 
 
+import java.util.concurrent.ConcurrentHashMap;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -20,6 +22,8 @@ public class Main {
 //    public static void main(String[] args) {
 //
 //    }
+
+    ConcurrentHashMap<Integer, Integer> map = new ConcurrentHashMap<>();
 
     //Main class with Integer Args
     public static void main(Integer[] args) {
