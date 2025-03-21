@@ -4,6 +4,10 @@
 
 # Leetcode and More Contents (For Interview SWE)
 * CP, DSA, OS, DBMS, CN, SQL Learning.
-* Later add System Design as well.
+* System Design, Design Pattern, Github.
+* Java, Spring, Spring Core, SpringBoot Microservices 
+  * Check other git repo for edureka microservices learning for practicals
+  * Also LibraryManagement System for spring boot learning with microservices github
+* Devops - Jenkins, AWS EC2, CI/CD, Docker, Kubernetes. (Check other git repo for edureka devops for practical)
 
 
