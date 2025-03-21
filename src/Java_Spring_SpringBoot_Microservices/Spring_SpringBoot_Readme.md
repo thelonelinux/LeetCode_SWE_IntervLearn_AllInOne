@@ -14,6 +14,7 @@
 
 
 ## MY LEARNING (SPRING FRAMEWORK, CORE TO SPRING BOOT)
+* FOR ALL SPRING LEARNING PLEASE CHECK THIS FIRST - IT INCLUDES MY LEARNING AND PRACTISE  AND YT LINKS - https://github.com/thelonelinux/Spring_Framework_Interv_Learning
 * https://www.geeksforgeeks.org/spring-boot/
 * Parallelly do code and learn
 ### MAVEN LEARNING

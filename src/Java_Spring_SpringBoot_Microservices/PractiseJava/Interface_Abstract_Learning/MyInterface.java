@@ -1,4 +1,4 @@
-package Java_SpringBoot_Microservices.PractiseJava.Interface_Abstract_Learning;
+package Java_Spring_SpringBoot_Microservices.PractiseJava.Interface_Abstract_Learning;
 
 /**
  * INTERFACE CAN'T BE FINAL

@@ -1,4 +1,4 @@
-package Java_SpringBoot_Microservices.PractiseJava.Comparator_Comparable_Learning;
+package Java_Spring_SpringBoot_Microservices.PractiseJava.Comparator_Comparable_Learning;
 
 import java.util.Comparator;
 

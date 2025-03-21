@@ -1,4 +1,4 @@
-package Java_SpringBoot_Microservices.PractiseJava.StaticBlock;
+package Java_Spring_SpringBoot_Microservices.PractiseJava.StaticBlock;
 
 public class StaticBlock {
 
