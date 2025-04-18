@@ -1,5 +1,6 @@
 # JAVA LEARNING
-* Interview level learning core java : https://www.youtube.com/watch?v=iBCZFYEZ6hg&list=PLlhM4lkb2sEjtoPRP2AfVGJWFoltwtDdx&ab_channel=SmartProgramming
+* Interview level learning core java YT Playlist
+  * https://www.youtube.com/watch?v=iBCZFYEZ6hg&list=PLlhM4lkb2sEjtoPRP2AfVGJWFoltwtDdx&ab_channel=SmartProgramming
 * For spring related learning check repo : thelonelinux/Spring_Framework_Interv_Learning
 
 ## MY LEARNING APPROACH FOR INTERVIEW
@@ -13,115 +14,41 @@
 
 ## MY LEARNING (DIFFICULT TOPICS FOR UNDERSTANDING)
 ### 1. THREAD-SAFE AND SYNCHRONIZED MEANING (https://www.geeksforgeeks.org/thread-safety-and-how-to-achieve-it-in-java/)
-* IN LAYMAN WORDS - BUT LEARN DEEP FROM THE LINK ABOVE (use of synchronized keywork in function to make it work like lock)
-  * Means in that java program, if we have multiple instance calling that object, then there value won't be changes in both the place
-  * like we have issue in critical section. Instead when they go in on Critical section of a thread, then it will use lock
-  * and hence they are called thread-safe and synchronized.
-* How to Achieve Thread Safety in Java?
-  * There are four ways to achieve Thread Safety in Java. These are:
-    * Using Synchronization - synchronized keyword used in function
-      * Used in the function name keyword, So that when this function is running, 
-        * all other threads will be stopped and allow this function to operate and complete first, Like Critical Section or like lock in C#.
-        * So we have function print five numbers. then when two threads call this function, then whichever thread first run this function will first complete it
-        * then only next thread will start running.
-    * Using Volatile Keyword
-    * Using Atomic Variable
-    * Using Final Keyword
+* IN LAYMAN WORDS - Use of synchronized keyword in function to make it work like lock, makes it critical section.
+  * Means when that function is called by one thread, then until that function call is completed all other threads goes in pause state.
+  * Means when a synchronized function is called by anyone of the thread, then it stops all other thread and once the synchronized function is done
+    * other threads re-starts (So this is what we usually do in critical section)
+  * So this way we achieve thread safety by making our function as critical section.
+
+* How to Achieve Thread Safety in Java? There are four ways to achieve Thread Safety in Java. These are:
+* 1. Using synchronized keyword in function : Synchronization
+* Synchronization is the process of allowing only one thread at a time to complete the particular task. It means when multiple threads executing simultaneously, and want to access the same resource at the same time, then the problem of inconsistency will occur. so synchronization is used to resolve  inconsistency problem by allowing only one thread at a time. 
+* Synchronization uses a synchronized keyword. Synchronized is the modifier that creates a block of code known as a critical section. 
+    * Used in the function name keyword, So that when this function is running, 
+    * all other threads will be stopped and allow this function to operate and complete first, Like Critical Section or like lock in C#.
+    * So we have function print five numbers. then when two threads call this function, then whichever thread first run this function will first complete it
+    * then only next thread will start running.
+
+* 2. Using Volatile Keyword - Used for field modifier.
+    * when volatile int is used in thread, then first the int task is completed, and it stops all other threads. so it acts like critical section variable.
+* 3. Using Atomic Variable - AtomicInteger class. 
+    * It behaves like wrapper integer class but with volatile keyword, So when this is used in thread, first it will get completed, then only other thread will process
+* 4. Using Final Keyword
+
 * CONCURRENT HASHMAP (https://www.geeksforgeeks.org/concurrenthashmap-in-java/)
   * This map internally have Synchronized keyword in the function which make it work like lock like as in critical section.
   * https://www.geeksforgeeks.org/how-does-concurrenthashmap-achieve-thread-safety-in-java/
 * REMEMBER - There is no lock keyword in java as we have in C#. Here we have synchronized keywork to be used in function.
 
 ### 2. JVM, JRE, JDK ARCHITECTURE, JIT, CLASSLOADER WHOLE FLOW LEARN. (https://www.youtube.com/watch?v=CDijVBqEeJ8&ab_channel=BitsAndBytes)
-* JVM ARCHITECTURE (In Layman words)
-  * Let say we make a HelloWorld.java class
-  * Then next step is to compile this class. So javac compiler will compile this class and convert it to bytecode HelloWorld.class
-  * This byte code is executed by JVM.
-  * So in JVM this bytecode goes in several states and it generates a machine code.
-    * JVM Interpret the byte code  and the output will be machine code.
-  * So Overall Flow is like : Developer Creates class (HelloWorld.java ) => Javac Compiler compiles it to Bytecode (HelloWorld.class) => JVM executes this Bytecode in several steps within JVM and produces Machine code.
-* JVM
-  * JVM Mainly divided into three parts
-    * 1. CLASS LOADER (Here it first receives the bytecode HelloWorld.class file in jvm)
-      * CLASS LOADER SUBSYSTEM - 
-        * LOADING
-          * Bootstrap class loader
-            * It is the first class loader that is responsible for loading the core java libraries in the "<JAVA_HOME>/jre/lib/*.jar".
-            * It will load all the jar file present in that folder
-          * Extension Class loader
-            * It is a child class of BootStrap class loader
-            * It is responsible of loading all classed from the extension class path in java.
-            * Extension class path is : "<JAVA_HOME>/jre/lib/ext".
-            * It will load all the jar present in ext folder 
-          * Application class loader
-            * It is a child class of Extension class loader
-            * It is responsible of loading classes from the application classpath.
-            * Application class loader dealing with application-specific classes.
-        * LINKING
-          * Verify (Verification)
-            * It checks whether the ".class" file is generated by valid compiler or not
-            * If verification fails,  it throws java.lang.VerifyError
-          * Prepare (Preparation)
-            * JVM allocates memory for class variables and initializes them with default values.
-          * Resolve (Resolution)
-            * It is the process of replacing the symbolic reference with direct reference to actual memory addresses.
-            * Example see in YT only. time 06:06 mins
-        * INITIALIZATION
-          * 1. All Static variables are assign with value
-          * 2. Static block will be executed from top to bottom.
-    * 2. MEMORY AREA
-      * Method Area
-        * It stores class level information like class name, method and variable information.
-        * Static variables
-        * The method are is shared among all the threads running in the JVM. (Not thread safe.)
-        * Only one Method area per JVM
-        * Note - Method Area, also known as the "Permanent Generation" in older JVM versions (up to java 7) or as the "Metaspace" in java 8 and later.
-      * Heap Area
-        * It stores objects, arrays, instance variable.
-        * The Heap area is shared among all the threads running in the JVM. (Not thread safe.)
-        * Only one Heap area per JVM
-      * Stack Area
-        * It stores local variables, current running methods.
-        * For every thread, JVM creates one runtime stack
-        * Each block of stack is called activation record/stack frame.
-        * Each stack frame contains : local variable, frame data and operand stack.
-      * PC Registers
-        * It stores current execution instruction, once it completes, Automatically update the next PC Register.
-        * Each thread has separate PC Registers.
-      * Native Method Stack
-        * Memory used for native method execution
-        * It is separate from the java stack to handle native (non-java) code.
-        * For every thread separate native stack is created.
-    * 3. EXECUTION ENGINE
-      * INTERPRETER
-        * It is responsible to read byte code and interprets into machine code line by line.
-        * The problem with interpreter is, it interprets every time even if repeated method called.
-          * Which effects the performance.
-          * IN LAY MAN WORDS (Very imp) - Same Method it will interpret again and again if it is called multiple times in the code. Which is overhead.
-        * To overcome this problem JIT Compiler introduced in 1.1 version. Introduced by Sun microsystems.
-      * JIT COMPILER (JUST IN TIME COMPILER)
-        * The main purpose of JIT compiler is to improve the performance.
-        * It compiles entire byte code and convert into the machine code.
-        * Whenever interpreter see repeated method calls JIT Compiler start working on this. Or say interpreter will activate the JIT compiler when it sees repeated methods.
-          * So this JIT compiler will compile entire method byte code and convert into the machine code.
-        * Profiler is responsible to identify the repeated method calls (Repeated method calls is also called as Hotspot)
-        * So the JIT compiler Includes below flow components
-          * Intermediate Code Generator
-          * Code Optimizer
-          * Target Code Generator
-          * Machine code / Native Code
-          * Profiler
-      * OTHER COMPONENTS
-        * Garbage Collector
-        * Security Manager
-        * etc.
-    * Java Native Interface
-      * Execution Engine <=> Java native Interface (JNI) => Native Method Library
-      * JNI interact with the Native Method Library and provides the native method library to Execution engine.
-      * In other word you can say, JNI is responsible to provide the native information to JVM
-  * JVM - Architecture (Full Image Flow of Architecture you can see in YT)
-
-#### JDK JVM JRE (https://www.youtube.com/watch?v=s7UgQ7_1KQY&ab_channel=Telusko)(https://www.youtube.com/watch?v=Q9ccJsqmDbs&ab_channel=SmartProgramming)
+#### 2A. CODE FLOW - FROM CODING TO BYTECODE TO MACHINE CODE (In Layman words)
+* Let say we make a HelloWorld.java class
+* Then next step is to compile this class. So javac compiler will compile this class and convert it to bytecode HelloWorld.class
+* This byte code is executed by JVM.
+* So in JVM this bytecode goes in several states and it generates a machine code.
+  * JVM Interpret the byte code  and the output will be machine code.
+* So Overall Flow is like : Developer Creates class (HelloWorld.java ) => Javac Compiler compiles it to Bytecode (HelloWorld.class) => JVM executes this Bytecode in several steps within JVM and produces Machine code.
+#### 2B. JDK JVM JRE (https://www.youtube.com/watch?v=s7UgQ7_1KQY&ab_channel=Telusko)(https://www.youtube.com/watch?v=Q9ccJsqmDbs&ab_channel=SmartProgramming)
 * JDK (JAVA DEVELOPMENT KIT)
   * It is development KIT, is used to develop, test and deploy java applications.
   * As a developer we install JDK in our system.
@@ -174,83 +101,171 @@
   * Whereas java's compiled code (bytecode) can run in any machine. As JVM will run this bytecode and not the machine.
     * And each machine has got it's own dependent JVM. So when you execute that bytecode, JVM will run it. 
     * Hence this makes Java a platform independent language.
-### 3. Revise OOPs Concepts all with better examples (https://www.geeksforgeeks.org/object-oriented-programming-oops-concept-in-java/)
+#### 2C. JVM ARCHITECTURE
+* JVM Mainly divided into three parts
+* 1. CLASS LOADER (Here it first receives the bytecode HelloWorld.class file in jvm)
+  * CLASS LOADER SUBSYSTEM - 
+    * LOADING
+      * Bootstrap class loader
+        * It is the first class loader that is responsible for loading the core java libraries in the "<JAVA_HOME>/jre/lib/*.jar".
+        * It will load all the jar file present in that folder
+      * Extension Class loader
+        * It is a child class of BootStrap class loader
+        * It is responsible of loading all classed from the extension class path in java.
+        * Extension class path is : "<JAVA_HOME>/jre/lib/ext".
+        * It will load all the jar present in ext folder 
+      * Application class loader
+        * It is a child class of Extension class loader
+        * It is responsible of loading classes from the application classpath.
+        * Application class loader dealing with application-specific classes.
+    * LINKING
+      * Verify (Verification)
+        * It checks whether the ".class" file is generated by valid compiler or not
+        * If verification fails,  it throws java.lang.VerifyError
+      * Prepare (Preparation)
+        * JVM allocates memory for class variables and initializes them with default values.
+      * Resolve (Resolution)
+        * It is the process of replacing the symbolic reference with direct reference to actual memory addresses.
+        * Example see in YT only. time 06:06 mins
+    * INITIALIZATION
+        * 1. All Static variables are assign with value
+        * 2. Static block will be executed from top to bottom.
+* 2. MEMORY AREA
+  * Method Area
+    * It stores class level information like class name, method and variable information. Static variables
+    * The method area is shared among all the threads running in the JVM. (Not thread safe.)
+    * Only one Method area per JVM
+    * Note - Method Area, also known as the "Permanent Generation" in older JVM versions (up to java 7) or as the "Metaspace" in java 8 and later.
+  * Heap Area
+    * It stores objects, arrays, instance variable.
+    * The Heap area is shared among all the threads running in the JVM. (Not thread safe.)
+    * Only one Heap area per JVM
+  * Stack Area
+    * It stores local variables, current running methods.
+    * For every THREAD, JVM creates one runtime stack
+    * Each block of stack is called activation record/stack frame.
+    * Each stack frame contains : local variable, frame data and operand stack.
+  * PC Registers
+    * It stores current execution instruction, once it completes, Automatically update the next PC Register.
+    * Each THREAD has separate PC Registers.
+  * Native Method Stack
+    * Memory used for native method execution
+    * It is separate from the java stack to handle native (non-java) code.
+    * For every thread separate native stack is created.
+* 3. EXECUTION ENGINE
+  * INTERPRETER
+    * It is responsible to read byte code and interprets into machine code line by line.
+    * The problem with interpreter is, it interprets every time even if repeated method called.
+      * Which effects the performance.
+      * IN LAY MAN WORDS (Very imp) - Same Method it will interpret again and again if it is called multiple times in the code. Which is overhead.
+    * To overcome this problem JIT Compiler introduced in 1.1 version. Introduced by Sun microsystems.
+  * JIT COMPILER (JUST IN TIME COMPILER)
+    * The main purpose of JIT compiler is to improve the performance.
+    * It compiles entire byte code and convert into the machine code.
+    * Whenever interpreter see repeated method calls JIT Compiler start working on this. Or say interpreter will activate the JIT compiler when it sees repeated methods.
+      * So this JIT compiler will compile entire method byte code and convert into the machine code.
+    * Profiler is responsible to identify the repeated method calls (Repeated method calls is also called as Hotspot)
+    * So the JIT compiler Includes below flow components
+      * Intermediate Code Generator
+      * Code Optimizer
+      * Target Code Generator
+      * Machine code / Native Code
+      * Profiler
+  * OTHER COMPONENTS
+    * Garbage Collector
+    * Security Manager
+    * etc.
+* Java Native Interface
+  * Execution Engine <=> Java Native Interface (JNI) => Native Method Library
+  * JNI interact with the Native Method Library and provides the native method library to Execution engine.
+  * In other word you can say, JNI is responsible to provide the native information to JVM
+* JVM - Architecture (Full Image Flow of Architecture you can see in YT)
+
+
+
+### 3. OOPS CONCEPTS WITH GOOD EXPLAIN EXAMPLE FOR INTERIVEW (https://www.geeksforgeeks.org/object-oriented-programming-oops-concept-in-java/)
 * OOPS (JAVA)
   * OOPS is a programming paradigm which deals with classes and objects
   * Here blue print is Class
-* 4 PILLARS OF JAVA OOPS CONCEPTS (https://www.youtube.com/watch?v=LqPl23MTK5o&ab_channel=EngineeringDigest)
-  * 1. ENCAPSULATION 
-    * All class members are stored in one place within the class
-    * Bundling of data and methods into a single unit. So inside class we bundled them.
-    * Access modifiers are stated here.
-    * Encapsulation also does data hiding.
-      * We can hide data here with private. And later we can set them using getters and setters.
-  * 2. INHERITANCE
-    * Reusing the old class with new methods. Code reusability is achieved.
-    * Inherits some properties of parent class in child class
-    * Animal is extended by cat
-    * Vehicle is extended by car and so on.
-  * 3. POLYMORPHISM
-    * Polymorphism is an important feature of Java OOPs concept and it allows us to perform multiple operations by using the single name of any method (interface)
-    * Very important to learn for Method Overloading
-      * https://stackoverflow.com/questions/2439782/overload-with-different-return-type-in-java?newreg=cd9c27c0a57e4c008e37b10d5dc95682
-      * Why is it not possible to overload a function just by changing the return type? Will that change in a future version of Java? By the way, just for reference, is this possible in C++?
-        * You can't do it in Java, and you can't do it in C++.
-        * The rationale is that the return value alone is not sufficient for the compiler to figure out which function to call:
-        * public int foo() {...}
-        * public float foo() {..}
-        * ...
-        * foo(); // which one?
-    * https://www.programiz.com/java-programming/method-overloading
+#### 3A. FOUR PILLARS OF JAVA OOPS CONCEPTS (https://www.youtube.com/watch?v=LqPl23MTK5o&ab_channel=EngineeringDigest)
+##### A1. ENCAPSULATION 
+* All class members are stored in one place within the class
+* Bundling of data and methods into a single unit. So inside class we bundled them.
+* Access modifiers are stated here.
+  * Encapsulation also does data hiding :  We can hide data here with private. And later we can set them using getters and setters.
+
+##### A2. INHERITANCE
+* Reusing the old class with new methods. Code reusability is achieved.
+* Inherits some properties of parent class in child class
+* Animal is extended by cat
+* Vehicle is extended by car and so on.
+
+##### A3. POLYMORPHISM
+* Notes with example -  https://www.geeksforgeeks.org/polymorphism-in-java/
+* Polymorphism is an important feature of Java OOPs concept and it allows us to perform multiple operations by using the single name of any method (interface)
+* METHOD OVERLOADING (TRICKY INTERVIEW QUESTION) (***Very important to learn for Method Overloading)
+  * https://stackoverflow.com/questions/2439782/overload-with-different-return-type-in-java?newreg=cd9c27c0a57e4c008e37b10d5dc95682
+  * Why is it not possible to overload a function just by changing the return type? Will that change in a future version of Java? By the way, just for reference, is this possible in C++?
+    * You can't do it in Java, and you can't do it in C++.
+    * THE RATIANALE IS THAT THE RETURN VALUE ALONE IS NOT SUFFICIENT FOR THE COMPILER TO FIGURE OUT WHICH FUNCTION TO CALL:
+    * public int foo() {...}
+    * public float foo() {..}
+    * ...
+    * foo(); // which one?
+  * https://www.programiz.com/java-programming/method-overloading
     * Note: The return types of the above methods are not the same.
-      * It is because method overloading is not associated with return types.
-      * VERY VERY IMP - Overloaded methods may have the same or different return types, but they must differ in parameters.
-      * REMEMBER THEY MUST HAVE DIFFERENT PARAMETERS IN TWO METHODS OF SAME METHOD NAME TO BE USED AS METHOD OVERLOADING.
-    * EXAMPLE
-      * Parent parent = new Parent();
-      * Parent parentChild = new Child(); //Means object of Parent but reference of Parent
-      * Child childParent = new Parent(); //this will give run time error, as child method not found in parent object
-      * Child child = new Child();
-  * 4. ABSTRACTION (HIDING IMPLEMENTATION DETAILS) (https://www.geeksforgeeks.org/abstraction-in-java-2/)
-    * Abstraction in Java is the process of hiding the implementation details and only showing the essential functionality or features to the user.
-    * In Java, abstraction is achieved by interfaces and abstract classes. We can achieve 100% abstraction using interfaces.
-      * We can't make objects of abstract class or interface. But we can do if we implement along.
-    * Abstraction in code example with real-life
-      * Let say we have computer class, this class needs hardDisk. So HardDisk has functionality of storing and data management method in it. 
-        * Now if we implement this HardDisk with seagate Class, then it will just show us the method name and we will implement it. But still how abstraction is achieved??????
-    * Abstraction Real-Life Example:
-      * Consider a real-life example of a man driving a car. 
-      * The man only knows that pressing the accelerator will increase the speed of a car or applying brakes will stop the car, 
-      * but he does not know how on pressing the accelerator the speed is actually increasing, 
-      * he does not know about the inner mechanism of the car or the implementation of the accelerator, brakes, etc. in the car. 
-      * This is what abstraction is.
-* ABSTRACTION VS ENCAPSULATION (https://stackoverflow.com/questions/742341/difference-between-abstraction-and-encapsulation)
-  * Encapsulation is the packing of "data" and "functions operating on that data" into a single component and restricting the access to some of the object's components.
-  * Encapsulation means that the internal representation of an object is generally hidden from view outside of the object's definition.
-  * Abstraction is a mechanism which represent the essential features without including implementation details.
-  * Encapsulation:-- Information hiding.
-  * Abstraction:-- Implementation hiding.
-*
+    * It is because method overloading is not associated with return types.
+    * VERY VERY IMP - Overloaded methods may have the same or different return types, but they must differ in parameters.
+    * REMEMBER THEY MUST HAVE DIFFERENT PARAMETERS IN TWO METHODS OF SAME METHOD NAME TO BE USED AS METHOD OVERLOADING.
+ 
+* METHOD OVERRIDING (TRICKY INTERVIEW QUESTION)
+  * Parent parent = new Parent();
+  * Parent parentChild = new Child(); //Means object of Parent but reference of Parent // Here child overriden method will be called if it calls any parent method then.
+  * Child childParent = new Parent(); //this will give run time error, as child method not found in parent object
+  * Child child = new Child();
+
+##### A4. ABSTRACTION (HIDING IMPLEMENTATION DETAILS) (https://www.geeksforgeeks.org/abstraction-in-java-2/)
+* Abstraction in Java is the process of hiding the implementation details and only showing the essential functionality or features to the user.
+* In Java, abstraction is achieved by interfaces and abstract classes. We can achieve 100% abstraction using interfaces.
+  * We can't make objects of abstract class or interface. But we can do if we implement along.
+* Abstraction in code example with real-life
+  * Let say we have computer class, this class needs hardDisk. So HardDisk has functionality of storing and data management method in it. 
+    * Now if we implement this HardDisk with seagate Class, then it will just show us the method name and we will implement it. But still how abstraction is achieved??????
+* Abstraction Real-Life Example:
+  * Consider a real-life example of a man driving a car. 
+  * The man only knows that pressing the accelerator will increase the speed of a car or applying brakes will stop the car, 
+  * but he does not know how on pressing the accelerator the speed is actually increasing, 
+  * he does not know about the inner mechanism of the car or the implementation of the accelerator, brakes, etc. in the car. 
+  * This is what abstraction is.
+
+#### 3(EXTRAS) ABSTRACTION VS ENCAPSULATION (https://stackoverflow.com/questions/742341/difference-between-abstraction-and-encapsulation)
+* Encapsulation is the packing of "data" and "functions operating on that data" into a single component and restricting the access to some of the object's components.
+* Encapsulation means that the internal representation of an object is generally hidden from view outside of the object's definition.
+* Abstraction is a mechanism which represent the essential features without including implementation details.
+* Encapsulation:-- Information hiding.
+* Abstraction:-- Implementation hiding.
  
 
-### 4. Vector in java
-* https://www.geeksforgeeks.org/java-util-vector-class-java/
-  * It is like ArrayList only, But it is thread safe and synchronized. Here critical section issue will not be there.
-  * The Vector class implements a growable array of objects. Vectors fall in legacy classes, but now it is fully compatible with collections. 
-  * It is found in java.util package and implement the List interface.
-  * Thread-Safe: All methods are synchronized, making it suitable for multi-threaded environments. However, this can lead to performance overhead in single-threaded scenarios.
-  * Allows Nulls: Can store null elements.
-  * Enumeration Support: Provides backward compatibility with Enumeration, a legacy way of iterating over elements.
-* Few more points about Vector are mentioned below:
+### 4. VECTOR IN JAVA (https://www.geeksforgeeks.org/java-util-vector-class-java/)
+* It is like ArrayList only, But it is thread safe and synchronized. Here critical section issue will not be there.
+* The Vector class implements a growable array of objects. Vectors fall in legacy classes, but now it is fully compatible with collections. 
+* It is found in java.util package and implement the List interface.
+* Thread-Safe: All methods are synchronized, making it suitable for multi-threaded environments. However, this can lead to performance overhead in single-threaded scenarios.
+* Allows Nulls: Can store null elements.
+* Enumeration Support: Provides backward compatibility with Enumeration, a legacy way of iterating over elements.
+* FEW MORE POINTS about Vector are mentioned below : 
   * They are very similar to ArrayList, but Vector is synchronized and has some legacy methods that the collection framework does not contain.
   * It also maintains an insertion order like an ArrayList. Still, it is rarely used in a non-thread environment as it is synchronized, and due to this, 
     * it gives a poor performance in adding, searching, deleting, and updating its elements.
   * The Iterators returned by the Vector class are fail-fast. In the case of concurrent modification, it fails and throws the ConcurrentModificationException.
 
 
-### 5. String, StringPools, StringBuffer and StringBuilder
+### 5. STRING, STRINGBUFFER AND STRINGBUILDER (STRING LITERALS AND STRING POOLS)
+#### A. String, String Ojbect, String Literals, String Pools, Heap Memory, Equals of String and (==) of String
+* All these I have written in String_Learning_Heap.java class. check there for example and also attached screenshot of demo of how things work there 
 * YT Link (String literal vs String object) : https://www.youtube.com/watch?v=ykqbCdz6Mk0&ab_channel=TechStack9
-* YT Link (Difference between string, stringBuffer and StringBuilder): https://www.youtube.com/watch?v=poh4e8Uubbo&ab_channel=TechStack9  
+#### B. YT Link (Difference between string, stringBuffer and StringBuilder)
+* https://www.youtube.com/watch?v=poh4e8Uubbo&ab_channel=TechStack9  
 
 ### 5A. Immutable vs Final Keywork
 * YT Link : https://www.youtube.com/watch?v=JWBqZDy97fw&ab_channel=SmartProgramming
@@ -263,13 +278,13 @@
   * 
 
 ### 7. Write about daemon thread and non-daemon thread
-  * https://stackoverflow.com/questions/2213340/what-is-a-daemon-thread-in-java
-  * Definition of Daemon (Computing):
-    * daemon: d(isk) a(nd) e(xecution) mon(itor) or from de(vice) mon(itor)
-      * Definition of Daemon (Computing):
-      * A background process that handles requests for services such as print spooling and file transfers, and is dormant when not required.
-      * Source: English by Oxford Dictionaries
-      * What is Daemon thread in Java?
+* https://stackoverflow.com/questions/2213340/what-is-a-daemon-thread-in-java
+* Definition of Daemon (Computing):
+  * daemon: d(isk) a(nd) e(xecution) mon(itor) or from de(vice) mon(itor)
+    * Definition of Daemon (Computing):
+    * A background process that handles requests for services such as print spooling and file transfers, and is dormant when not required.
+    * Source: English by Oxford Dictionaries
+    * What is Daemon thread in Java?
         Daemon threads can shut down any time in between their flow, Non-Daemon i.e. user thread executes completely.
         Daemon threads are threads that run intermittently in the background as long as other non-daemon threads are running.
         When all of the non-daemon threads complete, daemon threads terminates automatically.
@@ -278,21 +293,31 @@
         Daemon threads acts as services in Windows.
         The JVM stops the daemon threads when all user threads (in contrast to the daemon threads) are terminated. Hence daemon threads can be used to implement, for example, a monitoring functionality as the thread is stopped by the JVM as soon as all user threads have stopped.* .
   * .
+
 ### 8. Write about serialization and non-serialization
-  * YT Added, just add the link - https://www.youtube.com/watch?v=Uxhb3IHKMQk&t=164s&ab_channel=LetsMakeAutomationEasy-PradeepNailwal
-  * Layman words converting object to store in data, file, memory or db in stream of byte. see yt for more
+* YT Added, just add the link - https://www.youtube.com/watch?v=Uxhb3IHKMQk&t=164s&ab_channel=LetsMakeAutomationEasy-PradeepNailwal
+* Layman words converting object to store in data, file, memory or db in stream of byte. see yt for more
+
 ### 9. Inheritance vs Composition
-  * https://stackoverflow.com/questions/2399544/difference-between-inheritance-and-composition
+* https://stackoverflow.com/questions/2399544/difference-between-inheritance-and-composition
+
 ### 10. Aggregation vs Association vs Composition
-  * https://stackoverflow.com/questions/14837826/association-vs-aggregation-vs-composition-in-java
-  * https://stackoverflow.com/questions/20304116/aggregation-and-composition-in-java-code
+* https://stackoverflow.com/questions/14837826/association-vs-aggregation-vs-composition-in-java
+* https://stackoverflow.com/questions/20304116/aggregation-and-composition-in-java-code
+
 ### 11. Marker Interface
-  * https://stackoverflow.com/questions/58602321/what-is-the-point-of-marker-interface-in-java-and-why-cant-we-go-on-without-the
+* https://stackoverflow.com/questions/58602321/what-is-the-point-of-marker-interface-in-java-and-why-cant-we-go-on-without-the
+
 ### 12. Threads in Java
-  * https://www.geeksforgeeks.org/java-threads/
+* https://www.geeksforgeeks.org/java-threads/
+
+### 13. Write about ArrayList, List, HashMap, HashTable Internal working
+
 
  
- 
+
+------------------------
+
 ## OTHER TOPICS - INTERVIEWBIT PLUS NOTES AND LEARNING WITH PRACTICAL
 ### 1. JAVA VERSIONS AND LTS
 * See link for detail learning - https://medium.com/@a.r.m.monesan_9577/java-8-vs-java-11-vs-java-17-vs-java-21-a-comprehensive-comparison-aa4635f9c3fe
@@ -378,6 +403,5 @@
 
 
 ### JAVA 17 - FEATURES
-
 
 ### JAVA 21 - FEATURES

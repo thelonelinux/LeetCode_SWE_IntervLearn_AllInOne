@@ -1,4 +1,4 @@
-package Competitive_Programming.UnSolvedInQuestions_DoneWithHelpOr_ToDoLater;
+package UnSolvedInQuestions_DoneWithHelpOr_ToDoLater;
 
 public class CheckLaterQuestionsNotAbleToDoInOneGo {
 

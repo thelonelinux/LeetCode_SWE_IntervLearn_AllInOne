@@ -1,4 +1,4 @@
-package Competitive_Programming.LeetCode_ContestQuestions_Solved.Weekly_Contest_365;
+package LeetCode_ContestQuestions_Solved.Weekly_Contest_365;
 
 public class MaximumValue_of_an_Ordered_Triplet_I_2873_ {
 

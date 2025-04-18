@@ -1,4 +1,4 @@
-package Java_Spring_SpringBoot_Microservices.PractiseJava;
+package Core_Java_Learning.PractiseJava;
 
 
 import java.util.concurrent.ConcurrentHashMap;

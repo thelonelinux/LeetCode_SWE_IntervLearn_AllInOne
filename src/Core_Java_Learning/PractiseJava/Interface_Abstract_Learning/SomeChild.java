@@ -1,4 +1,4 @@
-package Java_Spring_SpringBoot_Microservices.PractiseJava.Interface_Abstract_Learning;
+package Core_Java_Learning.PractiseJava.Interface_Abstract_Learning;
 
 public class SomeChild extends MyAbstractClass implements MyInterface{
     @Override
