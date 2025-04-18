@@ -1,4 +1,5 @@
 # JAVA LEARNING
+* Interview level learning core java : https://www.youtube.com/watch?v=iBCZFYEZ6hg&list=PLlhM4lkb2sEjtoPRP2AfVGJWFoltwtDdx&ab_channel=SmartProgramming
 
 ## MY LEARNING APPROACH FOR INTERVIEW
 ### 1. FROM INTERVIEWBIT (PDF attached learn from it)
@@ -249,6 +250,12 @@
 ### 5. String, StringPools, StringBuffer and StringBuilder
 * YT Link (String literal vs String object) : https://www.youtube.com/watch?v=ykqbCdz6Mk0&ab_channel=TechStack9
 * YT Link (Difference between string, stringBuffer and StringBuilder): https://www.youtube.com/watch?v=poh4e8Uubbo&ab_channel=TechStack9  
+
+### 5A. Immutable vs Final Keywork
+* YT Link : https://www.youtube.com/watch?v=JWBqZDy97fw&ab_channel=SmartProgramming
+
+### 5B. Equals vs (==) operator
+* YT Link : https://www.youtube.com/watch?v=i7vYjvJOIiw&t=667s&ab_channel=SmartProgramming
 
 ### 6. Primitive Data Types and Wrapper Class
 * YT Link : https://www.youtube.com/watch?v=BypnBPwZf0w&t=19s&ab_channel=TechStack9
