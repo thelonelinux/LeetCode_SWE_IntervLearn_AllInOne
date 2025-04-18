@@ -13,6 +13,9 @@
 
 
 ## MY LEARNING (DIFFICULT TOPICS FOR UNDERSTANDING)
+### 0. THREADS IN JAVA (RUNNABLE INTERFACE)
+* https://www.geeksforgeeks.org/java-threads/
+
 ### 1. THREAD-SAFE AND SYNCHRONIZED MEANING (https://www.geeksforgeeks.org/thread-safety-and-how-to-achieve-it-in-java/)
 * IN LAYMAN WORDS - Use of synchronized keyword in function to make it work like lock, makes it critical section.
   * Means when that function is called by one thread, then until that function call is completed all other threads goes in pause state.
@@ -261,23 +264,55 @@
 
 
 ### 5. STRING, STRINGBUFFER AND STRINGBUILDER (STRING LITERALS AND STRING POOLS)
-#### A. String, String Ojbect, String Literals, String Pools, Heap Memory, Equals of String and (==) of String
+#### A. String, String Ojbect, String Literals, String Constant Pool, Heap Memory, Equals of String and (==) of String
 * All these I have written in String_Learning_Heap.java class. check there for example and also attached screenshot of demo of how things work there 
 * YT Link (String literal vs String object) : https://www.youtube.com/watch?v=ykqbCdz6Mk0&ab_channel=TechStack9
 #### B. YT Link (Difference between string, stringBuffer and StringBuilder)
 * https://www.youtube.com/watch?v=poh4e8Uubbo&ab_channel=TechStack9  
+* Check in interviewbit only Q.34
 
-### 5A. Immutable vs Final Keywork
+### 5-01. Immutable vs Final Keyword
 * YT Link : https://www.youtube.com/watch?v=JWBqZDy97fw&ab_channel=SmartProgramming
+* From the video as I learn in layman word
+  * Final => We can't change the reference of this object. It will be assigned only once. (Here reference can't be changed)
+  * Immutable => Means we can't change it's value/state. But will create a new object literal and takes that value and assign to it. (Here literal values can't be changed, string literal values can't be changed). So when we concate, we make new concatenated string and re-assign that literal, instead of changing the string literal. that old unconcatenated string literal will remain there.
 
-### 5B. Equals vs (==) operator
+#### Important Features of String Class (www.smartprogramming.in)
+1. String Constant Pool (SCP):- It is special memory location in heap area which stores String Literals.
+2. Immutable Objects:- The String objects are immutable which means once String object is created its data or state can't be changed but a new string object is created. Means if you try to change the data of string, like by concatenation then it will create a new string literal with that concatenated string and assign that concatenated literal string to this as new object string literal.
+3. + Operator for Strings:- Multiple Strings can be concatinated using + operator.
+4. Security:- The parameters used for network connections, database connection URLs, usernames/ passwords, etc are represented in Strings. If it was mutable, these parameters could be changed easily.
+5. Class loading:- String is used as an arguments for class loading. If mutable, it could result in the wrong class being loaded (because mutable objects change their state).
+6. Synchronization and Concurrency:- Making String immutable automatically makes them thread safe thereby solving the synchronization issues.
+7. Memory management:- When compiler optimizes our String objects, it seems that if two objects have the same value (a =" test", and b =" test") and thus we need only one string object (for both a and b, these two will point to the same object).
+
+#### String Literal vs String object 
+* (https://www.geeksforgeeks.org/string-initialization-java-string-literal-vs-string-object/)
+
+### 5-02. Equals vs (==) operator
 * YT Link : https://www.youtube.com/watch?v=i7vYjvJOIiw&t=667s&ab_channel=SmartProgramming
 
-### 6. Primitive Data Types and Wrapper Class
+### 6. PRIMITIVE DATA TYPES AND WRAPPER CLASS. (WHY WE NEED WRAPPER IF WE ALREADY HAVE PRMITIVE, AUTOBOXING AND UNBOXING)
 * YT Link : https://www.youtube.com/watch?v=BypnBPwZf0w&t=19s&ab_channel=TechStack9
-  * 
+* For notes check this : https://www.geeksforgeeks.org/wrapper-classes-java/
+* We need wrapper class for our primitive types to convert primitive to object. so it can be later used by collection like list to store.
+  * As list or other collections only stores object.
+  * Also this objects can be synchronized and used in threads so we need the wrapper of our primitive types.
+* Unboxing : Convert object Integer to prmitive int
+* Autoboxing : Converting prmitive int to Integer object. more see in notes
+* Primitive data types default values is something see in notes, for wrapper class it is null.
+* Prmivtive are mutable and stored in stack. Wrapper are immutable and stored in heap.
 
-### 7. Write about daemon thread and non-daemon thread
+### 7. DAEMON THREAD AND NON-DEAMON THREAD
+* YT : https://www.youtube.com/watch?v=zdYPQH7aR8k&ab_channel=NareshiTechnologies
+* In Layman : 
+  * Non daemon thread is like what you see in the frontend whatever is loading in the page. 
+  * Daemon thread is one which is loading the services in the background and helping non daemon thread to full fill its task. 
+  * Hence once the non-daemon thread is fully loaded. It won't need the help of deamon thread. 
+  * Hence JVM will stop daemon thread. So this is how it is in simple language. You can see YT above for details.
+* For code level understanding see this : https://www.geeksforgeeks.org/daemon-thread-java/
+
+* IN DEPTH STACKOVERFLOW BELOW
 * https://stackoverflow.com/questions/2213340/what-is-a-daemon-thread-in-java
 * Definition of Daemon (Computing):
   * daemon: d(isk) a(nd) e(xecution) mon(itor) or from de(vice) mon(itor)
@@ -294,24 +329,96 @@
         The JVM stops the daemon threads when all user threads (in contrast to the daemon threads) are terminated. Hence daemon threads can be used to implement, for example, a monitoring functionality as the thread is stopped by the JVM as soon as all user threads have stopped.* .
   * .
 
-### 8. Write about serialization and non-serialization
+### 8. SERIALIZATION AND NON-SERIALIZATION (IGNORE FOR NOW - NOT USUALLY ASKED IN JAVA INTERVIEWS)
 * YT Added, just add the link - https://www.youtube.com/watch?v=Uxhb3IHKMQk&t=164s&ab_channel=LetsMakeAutomationEasy-PradeepNailwal
 * Layman words converting object to store in data, file, memory or db in stream of byte. see yt for more
 
-### 9. Inheritance vs Composition
+### 9. INHERITANCE VS COMPOSITION (IGNORE FOR NOW - NOT ASKED IN INTERVIEW MOSTLY)
 * https://stackoverflow.com/questions/2399544/difference-between-inheritance-and-composition
 
-### 10. Aggregation vs Association vs Composition
+### 10. AGGREGATION VS ASSOCIATOIN VS COMPOSITION (IGNORE FOR NOW - NOT ASKED IN INTERVIEW MOSTLY)
 * https://stackoverflow.com/questions/14837826/association-vs-aggregation-vs-composition-in-java
 * https://stackoverflow.com/questions/20304116/aggregation-and-composition-in-java-code
 
-### 11. Marker Interface
+### 11. MARKER INTERFACE (JUST IGNORE)
 * https://stackoverflow.com/questions/58602321/what-is-the-point-of-marker-interface-in-java-and-why-cant-we-go-on-without-the
 
-### 12. Threads in Java
-* https://www.geeksforgeeks.org/java-threads/
+### 12. DATA STRUCTURE : COLLECTIONS FRAMEWORK IN JAVA - LIST, SET, QUEUE. MAP IS NOT PART OF COLLECTION
+#### A. DATA STRUCTURE IN JAVA (https://www.youtube.com/watch?v=Od-4hMfBkMI&list=PLlhM4lkb2sEiOcuH1g-CUuU288qmMNpyj&ab_channel=SmartProgramming)
+* Complete collection playlist yt video
+* Java has provided 8 data types. boolean, int, long, etc
+* Efficient storing of data is called data structures. Time and space algorithm comes up in the picture here.
 
-### 13. Write about ArrayList, List, HashMap, HashTable Internal working
+#### B. COLLECTION (JAVA.UTIL PACKAGE)
+* Collection hirarchy includes set, list and queue. Map is not part of collection hierarchy
+* https://www.youtube.com/watch?v=cXeMxHBbatQ&list=PLlhM4lkb2sEiOcuH1g-CUuU288qmMNpyj&index=8&ab_channel=SmartProgramming
+
+##### B1. LIST INTERFACE : ARRAYLIST CLASS AND VECTOR CLASS (IMPLEMENTS LIST INTERFACE, LIST INTERFACE EXTENDS COLLECTION INTERFACE)
+* List interface is implemented by ArrayList, LinkedList, Vector class. Vector class is further extended by Stack class.
+* ArrayList is created on the basis of resizable or growable Array. Internally it uses Array only.
+* Arrays size can't be increased or decreased, but we can increase or decrease the size of ArrayList.
+* ArrayList stored data in underlying Array in index based, means in sequence like we do in array.
+* ArrayList can store heterogenous data types.
+* Can store duplicate elements, and also can store any number of null.
+* Doesnot follow sorting order
+* Not synchronised, but Vectors are synchronised. Vector is like ArrayList only, but it is thread safe unlike ArrayList.
+* ARRAYLIST VS VECTOR
+  * https://www.youtube.com/watch?v=EdwHigOS8bE&list=PLlhM4lkb2sEiOcuH1g-CUuU288qmMNpyj&index=14&ab_channel=SmartProgramming
+  * Vectors are synchronized means - Methods in vectors are synchronized, whereas ArrayList are not synchronized
+  * So Vector is thread-safe, and since it stops other thread due to synchronization, then overhead comes up and this make vector slower than arrayList
+  * ArrayList new_capacity : (old_capacity * 3) / 2 + 1
+  * Vector new_capacity : old_capacity * 2
+
+##### B2. SET INTERFACE : HASHSET AND TREESET CLASS
+* SET Interface is implemented by HashSet class. HashSet is further extended by LinkedHashSet class.
+* SET Interface is extended by SortedSet interface, which is further extended by NavigableSet interface and this is implemented by TreeSet class.
+* HASHSET
+  * Underlying data structure of HashSet is hashtable. 
+    * So HashSet in backed by Map (see #C below to learn more about map and hashtable)
+  * Here data are not stored in indexed basis, not stored in sequence, But it store the elements according to their hashcode values. 
+    * hashcode is unique integer.
+  * NOTE : Hashtable is just an Array of Linkedlist.
+  * Also the values we add in our HashSet is stored in the backend as Key for Map. So we can't have duplicate key. Also key can't have multiple null, 
+    * Hence HashSet don't store duplicate and multiple null value.
+  * Can store heterogeneous values.
+  * Does not store data in sorted order.
+  * HashSet are non-synchronized data structure.
+* TREESET
+  * Underlying data structure is Balanced Tree.
+  * Not an indexed based data structure. Also, does not follows the insertion order, means retrieving the element in same sequence you inserted.
+  * It follows the sorting order. Gets data in sorted order.
+
+##### B3. QUEUE INTERFACE : ENQUEU (IGNORE FOR NOW)
+* .
+
+
+
+#### C. MAP : HASHMAP, HASHTABLE CLASS
+* We have 4 classes which implement Map Interface : HashMap, HashTable, LinkedHashMap, TreeHashMap
+* Difference between HashMap and HashTable and more (https://www.youtube.com/watch?v=z5tZ0Zb5rJQ&ab_channel=Telusko)
+* Map is not part of Collection
+
+##### C1. HASHTABLE CLASS INTERNAL WORKING
+* https://www.youtube.com/watch?v=YhQJdRnyO7A&list=PLlhM4lkb2sEiOcuH1g-CUuU288qmMNpyj&index=25&ab_channel=SmartProgramming
+* HashTable make use of hashtable data structure to make store the data. hashtable is array of linkedlist.
+* hashtable has concept of hashing to store the data and during hash collision linkedlist comes into play.
+* See more in YT.
+* HashTable initial capacity is 11.
+
+##### C2. HASHMAP CLASS AND ITS INTERNAL WORKING
+* Underlying data structure is hashtable. It stores data in the basis of hash code.
+* It stores the value in key value pair. for key it generates hash code integer and stores in the hashtable bucket.
+* hashtable is Array of LinkedList.
+* Key can't be duplicate. Key can have only one null value. Values can be duplicate and can store any number of null values.
+* Each Key value pair is called Entry. Entry is internal interface in Map interface. Entry is used to get these key value pairs.
+* Hashmap is not synchronized.
+
+### 13. SINGLETON DESIGN PATTERN - REAL TIME EXAMPLE (https://www.programiz.com/java-programming/singleton)
+* Use of Singleton in Java
+* Singletons can be used while working with databases. 
+* They can be used to create a connection pool to access the database while reusing the same connection for all the clients. For example,
+
+
 
 
  
