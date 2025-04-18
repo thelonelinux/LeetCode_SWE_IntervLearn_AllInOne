@@ -1,5 +1,6 @@
 # JAVA LEARNING
 * Interview level learning core java : https://www.youtube.com/watch?v=iBCZFYEZ6hg&list=PLlhM4lkb2sEjtoPRP2AfVGJWFoltwtDdx&ab_channel=SmartProgramming
+* For spring related learning check repo : thelonelinux/Spring_Framework_Interv_Learning
 
 ## MY LEARNING APPROACH FOR INTERVIEW
 ### 1. FROM INTERVIEWBIT (PDF attached learn from it)
