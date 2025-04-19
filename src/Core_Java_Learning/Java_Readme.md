@@ -6,10 +6,8 @@
 ## MY LEARNING APPROACH FOR INTERVIEW
 ### 1. FROM INTERVIEWBIT (PDF attached learn from it)
 ### 2. FROM GFG (You can go to the link in geeksforgeeks and learn from it)
-### 3. PRACTICE CODE AND LEARN
-* See Practise code added in this repo in Java folder in this repo only to understand critical topics with code practise
-### 4. TODO TOPICS (MY DOUBT TOPICS TO LEARN AND UNDERSTAND IN JAVA)
-* Add some important topic below like JVM structure etc mentioned below and learn better by YT
+### 3. PRACTICE CODE AND LEARN (See Practise code added in this repo in Java folder in this repo only to understand critical topics with code practise)
+### 4. MY LEARNING TOPICS BELOW (DOUBTFUL/DIFFICULT AND TOP UP TOPICS)
 
 
 ## MY LEARNING (DIFFICULT TOPICS FOR UNDERSTANDING)
@@ -418,6 +416,10 @@
 * Singletons can be used while working with databases. 
 * They can be used to create a connection pool to access the database while reusing the same connection for all the clients. For example,
 
+### 14. REGEX (REGULAR EXPRESSSION) IN JAVA
+* https://www.geeksforgeeks.org/regular-expressions-in-java/
+* Learn notes
+
 
 
 
@@ -425,7 +427,8 @@
 
 ------------------------
 
-## OTHER TOPICS - INTERVIEWBIT PLUS NOTES AND LEARNING WITH PRACTICAL
+
+## OTHER TOP UP TOPICS - LEARNING
 ### 1. JAVA VERSIONS AND LTS
 * See link for detail learning - https://medium.com/@a.r.m.monesan_9577/java-8-vs-java-11-vs-java-17-vs-java-21-a-comprehensive-comparison-aa4635f9c3fe
 * Java Long Term Support (Will be working for a long time)
@@ -445,8 +448,8 @@
 * Link to follow - https://www.linkedin.com/pulse/java-annotations-rahul-ranjan/
 * In Layman words - 
   * It was introduced in java 5.
-  * Annotations are java constructs which decorate a class, method, field, parameter, variable, constructor, or package.
-  * It acts like Metadata attribute to define the class.
+  * Annotations are java constructs which DECORATES a class, method, field, parameter, variable, constructor, or package.
+  * It acts like METADATA attribute to define the class.
     * So to decorate Class we use @Controller (For Controller Class), @Service (For service class), @SpringBootApplication, @Entity, @Component and so on
     * To decorate Method we use @Override, @PostMapping (To make that method as some Post verb)
     * To decorate variable we use @id (To make that variable as primary key in Entity class table)
@@ -471,7 +474,8 @@
   
 ### 3. JAVA 8 - FEATURES
 * Interviewbit - https://www.interviewbit.com/blog/java-8-features/
-  * 1. FUNCTIONAL INTERFACES AND LAMBDA EXPRESSION
+* In Java 8, a new notion called functional interfaces was introduced. A Functional Interface is an interface that has exactly one abstract method. To designate an interface as a Functional Interface, we don’t need to use the @FunctionalInterface annotation.
+* 1. FUNCTIONAL INTERFACES AND LAMBDA EXPRESSION
      * FUNCTIONAL INTERFACE
        * Functional Interfaces means only one Abstract Method in Interface, can have many default or static method though
        * So we can create object of this functional interfaces using lambda expression to implement abstract methods
@@ -490,17 +494,17 @@
       * You may send Lambda Expression as an argument to the “forEach” method, which accepts the Functional Interface as a single parameter.
       *       subList.forEach(sub -> System.out.println(sub));
       * Here sub is a abstract function or say interface abstract method of functional dependency
-  * 2. forEach() Method In Iterable Interface 
+* 2. forEach() Method In Iterable Interface 
     * To iterate a list or collection (See above lambda example, this is it)
     * n Java 8, the Java.lang interface now supports a “forEach” function. Iterable that can iterate over the collection’s items.
-  * 3. OPTIONAL CLASS - 
+* 3. OPTIONAL CLASS - 
     * This is used to check null pointer of an object and helps in reducing nullpointer exception 
     * in our code by doing check with their methods in Optional Class which is final class.
     * Example see in the link only mentioned in the above
-  * 4. DEFAULT AND STATIC METHODS IN INTERFACE - Introduced in Java 8
+* 4. DEFAULT AND STATIC METHODS IN INTERFACE - Introduced in Java 8
     * In Java 8, you may add non-abstract methods to interfaces, allowing you to create interfaces with method implementation. 
     * To construct interfaces with method implementation, use the Default and Static keywords.
-  * 5. ETC ETC.. check in link only.
+* 5. ETC ETC.. check in link only.
 
 
 ### JAVA 11 - FEATURES
