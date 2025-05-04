@@ -3,11 +3,27 @@
 
 ## LEARNING
 * Interviewbit learning you can do in pdf added in here.
+* Initial Notes added check that for OSI Model Basic Learning.
 
 ## GFG INDEX FOLLOW FOR LEARNING
 * https://www.geeksforgeeks.org/computer-network-tutorials/
 
-## GFG COMPUTER NETWORK TOPICWISE LEARNING
+
+## MY DEEP LEARNING VIA YOUTUBE (IN DEPTH UNDERSTANDING TOPIC WISE)
+* https://www.youtube.com/watch?v=lv_aTqoHCrM&list=PLgwJf8NK-2e6fvY8yegkzDBiK7ywj8ZhK&index=1&ab_channel=EngineeringFunda
+* FOR NOW JUST LEARNING AS BY WATCHING VIDEOS, WILL UPDATE MORE IN NOTES HERE IF NEEDED.
+* FOR NOW IT IS IN MY OWN UNDERSTANDING PHASE
+* ALSO THIS PLAYLIST HAS SOME VIDEOS WHICH ARE PAID SO CHECK FOR OTHER PLAYLIST OR VIDEO FOR THOSE TOPICS
+* Best way to learn ====>>> JUST WATCH VIDEOS OF TOPICS WHICH YOU NEED TO LEARN AND DON'T UNDERSTAND FROM THIS PLAYLIST
+
+#### VIDEO : IP ADDRESS, MAC ADDRESS, PORT ADDRESS 
+* (https://www.youtube.com/watch?v=8qmTsTcoCkY&list=PLgwJf8NK-2e6fvY8yegkzDBiK7ywj8ZhK&index=16&ab_channel=EngineeringFunda)
+* Learn this in Youtube is enough
+
+
+
+
+## GFG COMPUTER NETWORK TOPICS ONLY
 * 1. Fundamentals of Computer Network
   * Basics of Computer Networks
   * Characteristics of Computer Network
@@ -144,5 +160,5 @@
   * 5G and Beyond
   * Network Slicing in 5G
 
-## MY DEEP LEARNING VIA YOUTUBE (IN DEPTH UNDERSTANDING TOPIC WISE)
-* https://www.youtube.com/watch?v=lv_aTqoHCrM&list=PLgwJf8NK-2e6fvY8yegkzDBiK7ywj8ZhK&index=1&ab_channel=EngineeringFunda
+
+
