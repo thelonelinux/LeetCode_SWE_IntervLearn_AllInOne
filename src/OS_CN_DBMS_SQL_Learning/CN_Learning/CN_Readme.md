@@ -1,5 +1,5 @@
 # COMPUTER NETWORK LEARNING
-
+* For solving numericals for gate related in computer network - follow the youtube playlist of computer network of GATE Walla - EE, EC, CS & IN
 
 ## LEARNING
 * Interviewbit learning you can do in pdf added in here.
@@ -8,8 +8,24 @@
 ## GFG INDEX FOLLOW FOR LEARNING
 * https://www.geeksforgeeks.org/computer-network-tutorials/
 
+## DIFFICULT TO LEARN AND UNDERSTAND
+### 1. ALL THOSE TOPICS IN SHUBHAM CLOUD AWS INCLUDED LEARN THOSE
+### 2. SUBNETTING
+### 3. ROUTERS VS OTHER NETWORK DEVICES, WHAT THEY MEAN HOW THEY WORK WITH PRACTICAL
+### 4. IN DEPTH LEARNING OF ALL THE OSI MODEL LAYERS WITH THERE IN DEPTH PROTOCOLS.
 
-## A. MY DEEP LEARNING VIA YOUTUBE (IN DEPTH UNDERSTANDING TOPIC WISE - upto 20/136 videos are free. find other playlist or topicwise learn)
+
+## AVOID FOLLOWING YOUTUBE PLAYLIST FOR LEARNING
+### 1. GATE SMASHERS - As they are only teaching by writing on blackboard. No Practical devices seen to understand in depth. As in interview we have to explain to interviewer with practical way.
+### 2. KnowledgeGATE by Sanchit Sur - As in one video whole topic is there for 6 hours. Avoid it as we need processes learning with previous revision so.
+### 3. MultiAtoms - It has same drawback as for 1 and 2 above.
+### 4. Sudhakar Atchala - Same drawback as 1 above.
+### 5. 5 Minutes Engineering - Same drawback as 1 above. (BUT THIS LOOKS GOOD)
+### 6. GATE CSE LECTURES BY AMIT - Same drawback as 1 and 2 above
+### 7. Perfect Computer Engineer - Same drawback as 1 above
+
+
+## A. MY DEEP LEARNING VIA YOUTUBE (ENGINEERING FUNDA PLAYLIST - upto 20/136 videos are free. find other playlist or topicwise learn)
 * https://www.youtube.com/watch?v=lv_aTqoHCrM&list=PLgwJf8NK-2e6fvY8yegkzDBiK7ywj8ZhK&index=1&ab_channel=EngineeringFunda
 * Best way to learn ====>>> JUST WATCH VIDEOS OF TOPICS WHICH YOU NEED TO LEARN AND DON'T UNDERSTAND FROM THIS PLAYLIST
 
@@ -23,6 +39,14 @@
 
 ### AFTER VIDEO 20/136, THE VIDEO IS NOT AVAILABLE. IT IS ONLY AVAILABLE FOR PAID MEMBERS. SO CHECK FOR NEW PLAYLIST
 
+
+## B. MY DEEP LEARNING VIA YOUTUBE
+* Find some good Computer Network Playlist or some topic wise learn
+### 1. 5 Minutes Engineering - Same drawback as 1 above. (BUT THIS LOOKS GOOD)
+* https://www.youtube.com/watch?v=1V9mhVgVH3A&list=PLYwpaL_SFmcAXkWn2IR-l_WXOrr0n851a&ab_channel=5MinutesEngineering
+
+### 2. Arora Educator - Best for Complete OSI Model, You can check this playlist 
+* https://www.youtube.com/watch?v=mBC8UZEvPh4&list=PLspGXahxbrNzu9wkgUeQtkSOTxHwE-ii3&t=2990s&ab_channel=AroraEducator
 
 
 
