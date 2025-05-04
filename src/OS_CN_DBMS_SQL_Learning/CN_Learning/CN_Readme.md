@@ -9,16 +9,19 @@
 * https://www.geeksforgeeks.org/computer-network-tutorials/
 
 
-## MY DEEP LEARNING VIA YOUTUBE (IN DEPTH UNDERSTANDING TOPIC WISE)
+## A. MY DEEP LEARNING VIA YOUTUBE (IN DEPTH UNDERSTANDING TOPIC WISE - upto 20/136 videos are free. find other playlist or topicwise learn)
 * https://www.youtube.com/watch?v=lv_aTqoHCrM&list=PLgwJf8NK-2e6fvY8yegkzDBiK7ywj8ZhK&index=1&ab_channel=EngineeringFunda
-* FOR NOW JUST LEARNING AS BY WATCHING VIDEOS, WILL UPDATE MORE IN NOTES HERE IF NEEDED.
-* FOR NOW IT IS IN MY OWN UNDERSTANDING PHASE
-* ALSO THIS PLAYLIST HAS SOME VIDEOS WHICH ARE PAID SO CHECK FOR OTHER PLAYLIST OR VIDEO FOR THOSE TOPICS
 * Best way to learn ====>>> JUST WATCH VIDEOS OF TOPICS WHICH YOU NEED TO LEARN AND DON'T UNDERSTAND FROM THIS PLAYLIST
 
-#### VIDEO : IP ADDRESS, MAC ADDRESS, PORT ADDRESS 
+### VIDEO 16/136: IP ADDRESS, MAC ADDRESS, PORT ADDRESS 
 * (https://www.youtube.com/watch?v=8qmTsTcoCkY&list=PLgwJf8NK-2e6fvY8yegkzDBiK7ywj8ZhK&index=16&ab_channel=EngineeringFunda)
 * Learn this in Youtube is enough
+
+### VIDEO 20 ABOUT DATA LINK LAYERS LOOKS GOOD AS IT HAS GOOD CONTENT ABOUT HOW DATA LINK LAYER DOES FLOW AND ERROR CONTROL FOR FRAMES.
+* https://www.youtube.com/watch?v=fDb8pO2eDJ0&list=PLgwJf8NK-2e6fvY8yegkzDBiK7ywj8ZhK&index=17&ab_channel=EngineeringFunda
+* Whereas in Transport layer, it did flow and error control for Packets.
+
+### AFTER VIDEO 20/136, THE VIDEO IS NOT AVAILABLE. IT IS ONLY AVAILABLE FOR PAID MEMBERS. SO CHECK FOR NEW PLAYLIST
 
 
 
