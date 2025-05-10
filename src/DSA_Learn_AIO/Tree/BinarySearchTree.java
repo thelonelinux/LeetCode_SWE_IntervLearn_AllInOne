@@ -1,4 +1,4 @@
-package DSA_Learning_Graph_LinkedList_Tree_Stack_Queue_Sort_Recur.Tree;
+package DSA_Learn_AIO.Tree;
 
 /**
  * In Binary Search Tree left of parent node should always be less and right should be greater.

@@ -1,4 +1,4 @@
-package DSA_Learning_Graph_LinkedList_Tree_Stack_Queue_Sort_Recur.LinkedList;
+package DSA_Learn_AIO.LinkedList;
 
 /**
  * Here we will be adding all the methods usually possible in linkedList Custom Implementation

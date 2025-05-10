@@ -1,4 +1,4 @@
-package DSA_Learning_Graph_LinkedList_Tree_Stack_Queue_Sort_Recur.LinkedList;
+package DSA_Learn_AIO.LinkedList;
 
 /**
  * Here we will see how to implement a linkedList

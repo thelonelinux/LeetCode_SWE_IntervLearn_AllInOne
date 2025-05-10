@@ -1,4 +1,4 @@
-package DSA_Learning_Graph_LinkedList_Tree_Stack_Queue_Sort_Recur.DSA_101_Search_Sort_Stack_Queue_Recursion_etc;
+package DSA_Learn_AIO.DSA_101_Search_Sort_Stack_Queue_Recursion_etc;
 
 public class HeapSort {
 
