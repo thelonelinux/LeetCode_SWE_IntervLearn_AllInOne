@@ -1,4 +1,4 @@
-package DynamicProgramming_Learning.Using_2_Dimension_DP_Array;
+package DynamicProgramming_Learning.Type_2D_Array_DP_CodePractise;
 
 public class LongestIncreasingSubsequence {
 

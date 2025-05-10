@@ -1,4 +1,4 @@
-package DynamicProgramming_Learning.Using_1_Dimension_DP_Array;
+package DynamicProgramming_Learning.Type_1D_Array_DP_CodePractise;
 
 import java.util.Arrays;
 
