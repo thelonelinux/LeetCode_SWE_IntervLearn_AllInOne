@@ -7,6 +7,8 @@
 * https://www.geeksforgeeks.org/problems/matrix-chain-multiplication0303/1
 
 ### 2. BALLOON BURST QUESTION RELATED TO DP
+* In geeksforgeeks code solved at here
+* https://www.geeksforgeeks.org/problems/burst-balloons/1
 
 
 
@@ -37,5 +39,19 @@
 
 
 ## 2. BALOON BURST QUESTION USING DP
-* WATCH YT AND IT WILL BE ALSO SIMILAR QUESTION PATTERN LIKE MCM QUESTION ABOVE.
-* ALSO LATER MAKE YOUR OWN VIDEO SO THAT YOU CAN REVISE IN FUTURE.
+* YT watched below and well explained.
+* I have written the code also with explanation, but better watch youtube first.
+* also you first learn MCM to understand this concepts.
+* PDF will attach once taken.
+* It is already well explained in the YT by striver on how logically we can have independent sub-problem
+    * By taking such subarray where we think of bursting the element in the last.
+    * This is one very good concept to understand in whole of this problem. 
+    * bursting the balloon at last concept can only help us in coming dp approach. As in that case only we don't 
+    * have any dependency in right or left subarray/subproblem of dp.
+
+
+### YT 1 : Striver 90% Good with final approach and code
+* https://www.youtube.com/watch?v=Yz4LlDSlkns&t=7s&ab_channel=takeUforward
+
+### YT 2 : Other 75% good with explanation but code in python
+* https://www.youtube.com/watch?v=VFskby7lUbw&t=823s&ab_channel=NeetCode
