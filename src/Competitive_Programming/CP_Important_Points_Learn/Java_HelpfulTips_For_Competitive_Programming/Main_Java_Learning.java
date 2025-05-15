@@ -1,4 +1,4 @@
-package Competitive_Programming.Competitive_Programming_Blogs_Learning.Java_HelpfulTips_For_Competitive_Programming;
+package Competitive_Programming.CP_Important_Points_Learn.Java_HelpfulTips_For_Competitive_Programming;
 
 
 /**
