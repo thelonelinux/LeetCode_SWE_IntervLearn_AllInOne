@@ -3,6 +3,9 @@
 
 ## INCLUDES TWO PROBLEMS TYPE OF DP
 ### 1. MATRIX CHAIN MULTIPLICATION RELATE TO DP
+* In geeksforgeeks you can find here the code to solve and submit
+* https://www.geeksforgeeks.org/problems/matrix-chain-multiplication0303/1
+
 ### 2. BALLOON BURST QUESTION RELATED TO DP
 
 
