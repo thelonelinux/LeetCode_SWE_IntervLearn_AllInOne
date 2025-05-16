@@ -34,13 +34,14 @@ public class GraphImplementWithMatrixRepn {
         queue.offer(src); //Same as queue.add(src)
         visited[src] = true;
 
-        while (!queue.isEmpty()) {
+        while (!queue.isEmpty()) { //Traversing until queue is empty. so this will be O(V+E) and returns all the nodes in bfs.
             int node = queue.poll(); //Returns and removes the head of the queue
-            // queue.remove() will throw exception if queue is empty
+            // queue.peek()/queue.remove() will throw exception if queue is empty so using poll()
             result.add(node);
             for (int i = 0; i < V; i++) {
                 if (adjMatrix[node][i] == 1 && !visited[i]) {
-                    queue.offer(i);
+                    queue.offer(i);//or queue.add(i)
+                    // queue.add(i) will throw exception if queue is full so using offer()
                     visited[i] = true;
                 }
             }
@@ -49,6 +50,7 @@ public class GraphImplementWithMatrixRepn {
     }
 
     // DFS traversal from a given source
+    // This is a simple implementation of DFS using recursion
     public List<Integer> dfs(int src) {
         List<Integer> result = new ArrayList<>();
         boolean[] visited = new boolean[V];
@@ -64,6 +66,28 @@ public class GraphImplementWithMatrixRepn {
                 dfsUtil(i, visited, result);
             }
         }
+    }
+
+    //DFS my method simply (Using stack)
+    // This is a simple implementation of DFS using stack
+    public List<Integer> dfsMyMethod(int src) {
+        List<Integer> result = new ArrayList<>();
+        boolean[] visited = new boolean[V];
+        Stack<Integer> stack = new Stack<>();
+        stack.push(src);
+        visited[src] = true;
+
+        while (!stack.isEmpty()) {
+            int node = stack.pop();
+            result.add(node);
+            for (int i = 0; i < V; i++) {
+                if (adjMatrix[node][i] == 1 && !visited[i]) {
+                    stack.push(i);
+                    visited[i] = true;
+                }
+            }
+        }
+        return result;
     }
 
     // Utility to print adjacency matrix
@@ -86,6 +110,14 @@ public class GraphImplementWithMatrixRepn {
         graph.printAdjMatrix();
 
         System.out.println("BFS from node 0: " + graph.bfs(0));
-        System.out.println("DFS from node 0: " + graph.dfs(0));
+
+        //DFS can be done using stack or recursion
+        //DFS using recursion
+        System.out.println("DFS from node 0: " + graph.dfs(0));//0,1,3,2,4
+        //DFS from node 0: [0, 1, 3, 2, 4]
+
+        //DFS using stack
+        System.out.println("DFS my method from node 0: " + graph.dfsMyMethod(0));//0,2,4,1,3
+        //DFS my method from node 0: [0, 2, 4, 1, 3]
     }
 }
