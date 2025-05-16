@@ -4,18 +4,14 @@ import java.util.*;
 
 public class GraphImplementWithListRepn {
 
-    // Graph implementation using adjacency list representation
+    // Graph implementation using adjacency list representation (Instead of array matrix arr[][], using list<list>)
     // This is a simple implementation of an undirected graph using an adjacency list
     // where V is the number of vertices and adjList is the adjacency list
     // The adjacency list is a list of lists where adjList[i] contains the neighbors of vertex i
     // The graph is undirected, so if there is an edge between vertex u and vertex v,
     // then u is in the adjacency list of v and v is in the adjacency list of u
     // The graph is represented as a class with methods to add edges, perform BFS and DFS traversals, and print the adjacency list
-    // The BFS and DFS traversals are implemented using a queue and recursion respectively. I will add using stack as well
-    // The BFS traversal starts from a given source vertex and visits all reachable vertices in breadth-first order
-    // The DFS traversal starts from a given source vertex and visits all reachable vertices in depth-first order
-    // The BFS and DFS traversals return a list of visited vertices in the order they were visited
-    // The adjacency list is printed using the printAdjList method
+   
 
 
     private int V; // Number of vertices
@@ -34,6 +30,11 @@ public class GraphImplementWithListRepn {
         adjList.get(u).add(v);
         adjList.get(v).add(u);
     }
+
+     // The BFS and DFS traversals are implemented using a queue and recursion respectively. I will add using stack as well
+    // The BFS traversal starts from a given source vertex and visits all reachable vertices in breadth-first order
+    // The DFS traversal starts from a given source vertex and visits all reachable vertices in depth-first order
+    // The BFS and DFS traversals return a list of visited vertices in the order they were visited
 
     // BFS traversal from a given source
     public List<Integer> bfs(int src) {
@@ -95,6 +96,7 @@ public class GraphImplementWithListRepn {
         return result;
     }
 
+    // The adjacency list is printed using the printAdjList method
     // Utility to print adjacency list
     public void printAdjList() {
         for (int i = 0; i < V; i++) {
