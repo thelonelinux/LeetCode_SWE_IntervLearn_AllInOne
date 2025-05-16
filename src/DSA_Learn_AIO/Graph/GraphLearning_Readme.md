@@ -1,5 +1,5 @@
 # GRAPH LEARNING
-* Self Notes Added
+* Self Notes Added (AVOID NOTES - AS THEY ARE JUST IMPLEMENTATION - YOU HAVE ALREADY DONE CODE IN HERE)
     * 1. Graph self notes implement.pdf
         * Don't go deep in theory. Mostly do code implementation and problem solving based on graph.
         * This pdf you can see once. It's just normal theory of implementatoin.
