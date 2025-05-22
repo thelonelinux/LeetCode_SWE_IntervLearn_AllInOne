@@ -1,4 +1,4 @@
-package DSA_Learn_AIO.Tree;
+package DSA_Learn_AIO.Tree.Code_Practise;
 
 /**
  * In Binary Search Tree left of parent node should always be less and right should be greater.
