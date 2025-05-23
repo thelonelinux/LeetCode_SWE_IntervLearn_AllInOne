@@ -2,6 +2,8 @@
 * Mostly used for range query sum problems.
 * More details and related problems we will see below. 
 * We will be adding the code and sample problem and learning below
+* REM - FENWICK TREE WE DID FOR RANGE SUM
+* REM - SEGMENT TREE WE DID FOR BOTH RANGE SUM AND MAX VALUE IN GIVEN RANGE.
 
 
 
