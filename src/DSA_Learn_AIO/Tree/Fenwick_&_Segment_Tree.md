@@ -8,7 +8,7 @@
 
 
 ## A. MY LEARNING (EXPLORING)
-* 1. SELF MADE NOTES
+* 1. SELF MADE NOTES - Don't learn from notes, videos is fine and explains all. for notes just see for fenwick tree, 2's complement and fenwick tree how it looks.
 * 2. YOUTUBE
 * 3. LEETCODE FOR SAMPLE PROBLEMS
 

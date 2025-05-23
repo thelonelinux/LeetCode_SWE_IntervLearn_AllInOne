@@ -5,7 +5,7 @@ package DSA_Learn_AIO.Tree.Code_Practise;
  * Supports efficient prefix sum queries and point updates in O(log n) time.
  * Useful for problems involving range sum queries and updates.
  */
-public class Simple_FenwickTree {
+public class FenwickTreeForRangeSum {
    
    //FUNCTION 1
     // Update the value at index 'idx' by 'delta'

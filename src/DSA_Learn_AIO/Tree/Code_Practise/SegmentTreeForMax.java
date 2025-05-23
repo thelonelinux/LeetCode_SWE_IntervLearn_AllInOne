@@ -5,7 +5,7 @@ package DSA_Learn_AIO.Tree.Code_Practise;
  * Supports efficient range maximum queries and point updates in O(log n) time.
  */
 
-public class SegmentTree {
+public class SegmentTreeForMax {
 
      // Build the segment tree recursively
     public static void build(int[] arr, int[] segmentTree, int l, int r, int idx) {
