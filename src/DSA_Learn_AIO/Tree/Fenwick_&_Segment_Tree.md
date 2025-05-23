@@ -17,6 +17,7 @@
 
 ### 2. YOUTUBE LEARNING 
 * FOLLOWING PLAYLIST (https://www.youtube.com/watch?v=9uaXG62Y8Uw&list=PLgUwDviBIf0rf5CQf_HFt35_cF04d8dHN&index=1&ab_channel=takeUforward)
+* Take you forward (Playlist by striver)
 #### 1. YT FIRST VIDEO (FENWICK TREE AND UPDATE RANGE QUERY PROBLEM SOLVED)
 * https://www.youtube.com/watch?v=9uaXG62Y8Uw&ab_channel=takeUforward
 * This is done by striver only. so check it with use case example it has explained.
@@ -36,3 +37,18 @@
 
 #### 3. YT THIRD VIDEO (SEGMENT TREE UNDESTANDING AND IMPLEMENTATION)
 * https://www.youtube.com/watch?v=-dUiRtJ8ot0&list=PLgUwDviBIf0rf5CQf_HFt35_cF04d8dHN&index=3&ab_channel=takeUforward
+* This video alone is enough to understand how to build segment tree, concept and internal logic.
+* Problems like max value find in given range. 
+* Problems like range sum (as we did in fenwick tree - just here instead of adding max we add sum from it's child node to root node.)
+* How given n array we make segment tree of size 4*n is required.
+* SO SEE THE VIDEO AND YOU WILL KNOW ENOUGH
+
+#### 4. YT FOURTH VIDEO (LAZY PROPOGATION IN SEGMENT TREE)
+* https://www.youtube.com/watch?v=rwXVCELcrqU&list=PLgUwDviBIf0rf5CQf_HFt35_cF04d8dHN&index=4&ab_channel=takeUforward
+* SKIPPED FOR NOW
+
+
+
+#### 5. YT FIFTH VIDEO (SOME CODEFORCE PROBLEM INVOLVING BINARY SEARCH AND FENWICK TREE)
+* https://www.youtube.com/watch?v=fgEe-iPdqeI&list=PLgUwDviBIf0rf5CQf_HFt35_cF04d8dHN&index=5&ab_channel=takeUforward
+* SKIPPED FOR NOW
