@@ -1,4 +1,4 @@
-import java.util.*;
+
 
 
 public class Main {
@@ -33,6 +33,7 @@ public class Main {
 
         String haystack = "abc";
         String needle = "c";
+        System.out.println("Hello world!");
 
         System.out.println(strStr(haystack, needle));
 
