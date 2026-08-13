@@ -1,4 +1,4 @@
-package Competitive_Programming.CP_Important_Points_Learn.NewAlgorithmLearning;
+package CP_Important_Points_Learn.NewAlgorithmLearning;
 
 public class MooresVotingAlgorithm_ForMajorityElement {
 

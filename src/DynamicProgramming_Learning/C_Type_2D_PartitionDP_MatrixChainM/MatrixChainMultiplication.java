@@ -1,4 +1,4 @@
-package DynamicProgramming_Learning.Type_2D_PartitionDP_MatrixChainM;
+package DynamicProgramming_Learning.C_Type_2D_PartitionDP_MatrixChainM;
 
 public class MatrixChainMultiplication {
 

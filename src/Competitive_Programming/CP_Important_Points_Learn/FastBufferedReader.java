@@ -1,4 +1,4 @@
-package Competitive_Programming.CP_Important_Points_Learn;
+package CP_Important_Points_Learn;
 
 import java.io.BufferedReader;
 import java.io.IOException;

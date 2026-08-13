@@ -1,4 +1,4 @@
-package DynamicProgramming_Learning.Type_2D_Array_DP_CodePractise;
+package DynamicProgramming_Learning.B_Type_2D_Array_DP_CodePractise;
 
 public class LongestCommonSubsequence {
 

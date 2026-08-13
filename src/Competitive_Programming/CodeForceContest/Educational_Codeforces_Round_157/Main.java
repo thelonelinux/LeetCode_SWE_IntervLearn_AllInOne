@@ -1,4 +1,4 @@
-package Competitive_Programming.CodeForceContest.Educational_Codeforces_Round_157;
+package CodeForceContest.Educational_Codeforces_Round_157;
 
 import java.util.ArrayList;
 import java.util.List;

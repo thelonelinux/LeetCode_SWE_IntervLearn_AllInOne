@@ -1,4 +1,4 @@
-package DynamicProgramming_Learning.Type_1D_Array_DP_CodePractise;
+package DynamicProgramming_Learning.A_Type_1D_Array_DP_CodePractise;
 
 import java.util.Scanner;
 

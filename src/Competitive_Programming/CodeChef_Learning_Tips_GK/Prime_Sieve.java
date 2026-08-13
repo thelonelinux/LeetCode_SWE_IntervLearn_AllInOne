@@ -1,4 +1,4 @@
-package Competitive_Programming.CodeChef_Learning_Tips_GK;
+package CodeChef_Learning_Tips_GK;
 
 import java.util.Arrays;
 
