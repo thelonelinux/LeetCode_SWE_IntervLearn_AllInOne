@@ -1,6 +1,10 @@
 # ANGULAR LEARNING
 * ANGULAR ROADMAP : https://roadmap.sh/angular?utm_source=chatgpt.com
-
+* https://angular.dev/overview
+* FROM GITHUB CODE LEARNING
+    * https://github.com/mohitdjcet/angular21-tutorial/tree/main
+    * In each branch of this repo you will see different topics on angular.
+    * Like interpolation etc. : https://github.com/mohitdjcet/angular21-tutorial
 
 
 ## LEARNING
@@ -49,3 +53,9 @@
 #### START THE PROJECT
 * Use command: ng serve
 * You will get link for localhost, open it in browser : http://localhost:4200/
+
+### LECTURE VIDEO 4
+* FOLDER STRUCTURE IN ANGULAR PROJECT
+* https://www.youtube.com/watch?v=14n40jOSX6k&list=PLsjpRo2EZP1LTrYY6_FMpx6cqmjuPdoo2&index=4
+* package.json contains all the dependencies/package versions.
+
